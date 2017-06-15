@@ -1,8 +1,10 @@
-119
+162
 ~M 0 "" 0 $root
 ~A 1 "" 0 $root
 ~M 3 "./src/Adder.v" 21 Adder
 ~A 1 "./src/Adder.v" 21 Adder
+~M 3 "./src/InstructionMemory.v" 20 InstructionMemory
+~A 1 "./src/InstructionMemory.v" 20 InstructionMemory
 ~M 3 "./src/MUX2.v" 23 MUX2
 ~A 1 "./src/MUX2.v" 23 MUX2
 ~M 3 "./src/PCMux.v" 22 mux2

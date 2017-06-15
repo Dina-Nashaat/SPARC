@@ -1,2 +1,3 @@
 .\src\MUX2.v
 .\src\Adder.v
+.\src\InstructionMemory.v

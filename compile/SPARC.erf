@@ -1,7 +1,8 @@
 MESSAGE "Pass 1. Scanning modules hierarchy."
 MESSAGE_SP VCP2113 "Module \$root found in current working library."
 BEGINPROGRESS Compiling...
-UPDATEPROGRESS 17
+UPDATEPROGRESS 11
+UPDATEPROGRESS 23
 UPDATEPROGRESS 35
 MESSAGE "Pass 2. Processing instantiations."
 UPDATEPROGRESS 45
@@ -11,11 +12,12 @@ MESSAGE "Running Optimizer."
 MESSAGE "ELB/DAG code generating."
 MESSAGE_SP VCP2113 "Module \$root found in current working library."
 MESSAGE_SP VCP2113 "Module mux2 found in current working library."
-UPDATEPROGRESS 86
-UPDATEPROGRESS 93
+UPDATEPROGRESS 85
+UPDATEPROGRESS 90
+UPDATEPROGRESS 95
 UPDATEPROGRESS 100
-MESSAGE "Unit top modules: MUX2 Adder."
-MESSAGE "$root top modules: mux2 MUX2 Adder."
+MESSAGE "Unit top modules: MUX2 Adder InstructionMemory."
+MESSAGE "$root top modules: mux2 MUX2 Adder InstructionMemory."
 ENDPROGRESS Compiling...
-SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 0[s]."
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 1[s]."
 MESSAGE "done"
