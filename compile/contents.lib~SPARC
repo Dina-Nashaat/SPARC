@@ -1,5 +1,7 @@
-13
+53
 ~M 0 "" 0 $root
 ~A 1 "" 0 $root
+~M 3 "./src/MUX2.v" 23 MUX2
+~A 1 "./src/MUX2.v" 23 MUX2
 ~M 3 "./src/PCMux.v" 22 mux2
 ~A 1 "./src/PCMux.v" 22 mux2

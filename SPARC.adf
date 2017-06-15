@@ -37,6 +37,8 @@ SPARC=.
 Active_lib=
 
 [Files]
+/MUX2.v=-1
 
 [Files.Data]
+.\src\MUX2.v=Verilog Source Code
 

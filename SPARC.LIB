@@ -1,8 +1,15 @@
-timestamp=1497556552247
+timestamp=1497557157634
 
 [$root]
-A/$root=22|""|0|1*0
-BinI32/$root=3*0
+A/$root=22|""|0|1*3684
+BinI32/$root=3*3295
+Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
+
+[MUX2]
+A/MUX2=22|./src/MUX2.v|23|1*4090
+BinI32/MUX2=3*3434
+P/~emb=213,372,540,616
+R=./src/MUX2.v|23
 Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
 
 [mux2]
@@ -13,17 +20,19 @@ R=./src/PCMux.v|22
 Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
 
 [~A]
-LastVerilogToplevel=mux2
-ModifyID=13
+LastVerilogToplevel=MUX2
+ModifyID=53
 Version=73
+c:/My_Designs/SPARC/SPARC/src/MUX2.v=0*4452*4848
 c:/My_Designs/SPARC/SPARC/src/PCMux.v=0*918*1315
 
 [~MFT]
-0=3|0SPARC.mgf|1315|0
-1=1|1SPARC.mgf|390|0
-3=1|3SPARC.mgf|139|0
+0=13|0SPARC.mgf|4848|833
+1=8|1SPARC.mgf|4090|2239
+3=8|3SPARC.mgf|3434|1785
 
 [~U]
-$root=12|0*0|
+$root=12|0*3519|
+MUX2=12|0*3685||0x90
 mux2=12|0*150||0x90
 
