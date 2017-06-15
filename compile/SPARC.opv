@@ -1,0 +1,1 @@
+ -erf "c:\My_Designs\SPARC\SPARC\compile\SPARC.erf" -work SPARC -lc c:/My_Designs/SPARC/library.cfg -fl c:/My_Designs/SPARC/SPARC/projlib.cfg -o c:/My_Designs/SPARC/SPARC/compile -l "SPARC" -sve   -O2
