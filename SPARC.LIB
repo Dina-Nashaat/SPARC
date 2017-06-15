@@ -1,13 +1,20 @@
-timestamp=1497557157634
+timestamp=1497557729659
 
 [$root]
-A/$root=22|""|0|1*3684
-BinI32/$root=3*3295
+A/$root=22|""|0|1*8490
+BinI32/$root=3*7097
+Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
+
+[Adder]
+A/Adder=22|./src/Adder.v|21|1*10339
+BinI32/Adder=3*8746
+P/~emb=150,296,427,497
+R=./src/Adder.v|21
 Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
 
 [MUX2]
-A/MUX2=22|./src/MUX2.v|23|1*4090
-BinI32/MUX2=3*3434
+A/MUX2=22|./src/MUX2.v|23|1*8896
+BinI32/MUX2=3*7236
 P/~emb=213,372,540,616
 R=./src/MUX2.v|23
 Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
@@ -20,19 +27,21 @@ R=./src/PCMux.v|22
 Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
 
 [~A]
-LastVerilogToplevel=MUX2
-ModifyID=53
+LastVerilogToplevel=Adder
+ModifyID=119
 Version=73
 c:/My_Designs/SPARC/SPARC/src/MUX2.v=0*4452*4848
+c:/My_Designs/SPARC/SPARC/src/MUX2.v_Adder.v=0*9352*9820
 c:/My_Designs/SPARC/SPARC/src/PCMux.v=0*918*1315
 
 [~MFT]
-0=13|0SPARC.mgf|4848|833
-1=8|1SPARC.mgf|4090|2239
-3=8|3SPARC.mgf|3434|1785
+0=25|0SPARC.mgf|9820|1762
+1=19|1SPARC.mgf|10339|7045
+3=19|3SPARC.mgf|8746|5587
 
 [~U]
-$root=12|0*3519|
-MUX2=12|0*3685||0x90
+$root=12|0*7783|
+Adder=12|0*8716||0x90
+MUX2=12|0*7949||0x90
 mux2=12|0*150||0x90
 
