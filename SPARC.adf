@@ -40,9 +40,11 @@ Active_lib=
 /MUX2.v=-1
 /Adder.v=-1
 /InstructionMemory.v=-1
+/SignExtend.v=-1
 
 [Files.Data]
 .\src\MUX2.v=Verilog Source Code
 .\src\Adder.v=Verilog Source Code
 .\src\InstructionMemory.v=Verilog Source Code
+.\src\SignExtend.v=Verilog Source Code
 

@@ -1,4 +1,4 @@
-162
+228
 ~M 0 "" 0 $root
 ~A 1 "" 0 $root
 ~M 3 "./src/Adder.v" 21 Adder
@@ -7,5 +7,7 @@
 ~A 1 "./src/InstructionMemory.v" 20 InstructionMemory
 ~M 3 "./src/MUX2.v" 23 MUX2
 ~A 1 "./src/MUX2.v" 23 MUX2
+~M 3 "./src/SignExtend.v" 21 SignExtend
+~A 1 "./src/SignExtend.v" 21 SignExtend
 ~M 3 "./src/PCMux.v" 22 mux2
 ~A 1 "./src/PCMux.v" 22 mux2

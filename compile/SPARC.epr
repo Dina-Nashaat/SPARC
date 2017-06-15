@@ -1,3 +1,1 @@
-"./src/Adder.v"	1
-"./src/InstructionMemory.v"	1
-"./src/MUX2.v"	1
+"./src/SignExtend.v"	1
