@@ -23,11 +23,12 @@ module IUAdder (
 	input [5:0] op,		 
 	input carry,
 	output [31:0] result,
+	output [4:0] flags,	  					//[n, z, v, c]
 	);					
 	
 	reg [32:0] sum;	 
+	reg icc_n, icc_z, icc_c, icc_v;
 	initial begin 	   	
-		reg icc_n, icc_z, icc_c, icc_v;
 		case (op)
 			6'b000000: sum = A + B;	  								//ADD
 			6'b010000:												//ADDcc
@@ -68,4 +69,8 @@ module IUAdder (
 		endcase	 
 	end
 	assign result = sum;
+	assign flags[0] = icc_c;
+	assign flags[1] = icc_v;
+	assign flags[2] = icc_z;
+	assign flags[3] = icc_n;
 endmodule

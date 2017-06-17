@@ -4,3 +4,5 @@ i<>.\src\InstructionMemory.v
 i<>.\src\SignExtend.v
 i<>.\src\IUAdder.v
 i<>.\src\IULogical.v
+i<>.\src\Instruction_Decode.v
+i<>.\src\Reg_file.v

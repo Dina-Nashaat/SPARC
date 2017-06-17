@@ -1,18 +1,20 @@
-866
+1155
 ~M 0 "" 0 $root
 ~A 1 "" 0 $root
 ~M 3 "./src/Adder.v" 21 Adder
 ~A 1 "./src/Adder.v" 21 Adder
 ~M 3 "./src/IUAdder.v" 21 IUAdder
 ~A 1 "./src/IUAdder.v" 21 IUAdder
-~M 3 "./src/IULogical.v" 25 IULogical
-~A 1 "./src/IULogical.v" 25 IULogical
+~M 3 "./src/IULogical.v" 13 IULogical
+~A 1 "./src/IULogical.v" 13 IULogical
 ~M 3 "./src/IU_Adder.v" 21 IU_Adder
 ~A 1 "./src/IU_Adder.v" 21 IU_Adder
 ~M 3 "./src/InstructionMemory.v" 20 InstructionMemory
 ~A 1 "./src/InstructionMemory.v" 20 InstructionMemory
 ~M 3 "./src/MUX2.v" 23 MUX2
 ~A 1 "./src/MUX2.v" 23 MUX2
+~M 3 "./src/Reg_file.v" 1 Reg_file
+~A 1 "./src/Reg_file.v" 1 Reg_file
 ~M 3 "./src/SignExtend.v" 21 SignExtend
 ~A 1 "./src/SignExtend.v" 21 SignExtend
 ~M 3 "./src/PCMux.v" 22 mux2
