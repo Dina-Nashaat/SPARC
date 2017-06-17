@@ -1,6 +1,11 @@
 MESSAGE "Pass 1. Scanning modules hierarchy."
 MESSAGE_SP VCP2113 "Module \$root found in current working library."
 BEGINPROGRESS Compiling...
+UPDATEPROGRESS 5
+UPDATEPROGRESS 11
+UPDATEPROGRESS 17
+UPDATEPROGRESS 23
+UPDATEPROGRESS 29
 UPDATEPROGRESS 35
 MESSAGE "Pass 2. Processing instantiations."
 UPDATEPROGRESS 45
@@ -10,13 +15,17 @@ MESSAGE "Running Optimizer."
 MESSAGE "ELB/DAG code generating."
 MESSAGE_SP VCP2113 "Module \$root found in current working library."
 MESSAGE_SP VCP2113 "Module mux2 found in current working library."
-MESSAGE_SP VCP2113 "Module MUX2 found in current working library."
-MESSAGE_SP VCP2113 "Module Adder found in current working library."
-MESSAGE_SP VCP2113 "Module InstructionMemory found in current working library."
-UPDATEPROGRESS 90
+MESSAGE_SP VCP2113 "Module queue_data found in current working library."
+MESSAGE_SP VCP2113 "Module IU_Adder found in current working library."
+UPDATEPROGRESS 82
+UPDATEPROGRESS 85
+UPDATEPROGRESS 88
+UPDATEPROGRESS 91
+UPDATEPROGRESS 94
+UPDATEPROGRESS 97
 UPDATEPROGRESS 100
-MESSAGE "Unit top modules: SignExtend."
-MESSAGE "$root top modules: mux2 MUX2 Adder InstructionMemory SignExtend."
+MESSAGE "Unit top modules: MUX2 Adder InstructionMemory SignExtend IUAdder IULogical."
+MESSAGE "$root top modules: mux2 MUX2 Adder InstructionMemory SignExtend queue_data IU_Adder IUAdder IULogical."
 ENDPROGRESS Compiling...
-SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 0[s]."
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 1[s]."
 MESSAGE "done"

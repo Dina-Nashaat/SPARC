@@ -2,3 +2,5 @@
 .\src\Adder.v
 .\src\InstructionMemory.v
 .\src\SignExtend.v
+.\src\IUAdder.v
+.\src\IULogical.v

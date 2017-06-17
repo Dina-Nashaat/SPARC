@@ -1,34 +1,55 @@
-timestamp=1497565428522
+timestamp=1497661153337
 
 [$root]
-A/$root=22|""|0|1*20525
-BinI32/$root=3*15264
+A/$root=22|""|0|1*83179
+BinI32/$root=3*62974
 Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
 
 [Adder]
-A/Adder=22|./src/Adder.v|21|1*17851
-BinI32/Adder=3*13905
+A/Adder=22|./src/Adder.v|21|1*85108
+BinI32/Adder=3*64601
 P/~emb=150,296,427,497
 R=./src/Adder.v|21
 Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
 
+[IUAdder]
+A/IUAdder=22|./src/IUAdder.v|21|1*88888
+BinI32/IUAdder=3*66508
+P/~emb=229,482,898,1036
+R=./src/IUAdder.v|21
+Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
+
+[IULogical]
+A/IULogical=22|./src/IULogical.v|25|1*91144
+BinI32/IULogical=3*68960
+P/~emb=64,198,262,326
+R=./src/IULogical.v|25
+Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
+
+[IU_Adder]
+A/IU_Adder=22|./src/IU_Adder.v|21|1*36747
+BinI32/IU_Adder=3*32096
+P/~emb=268,479,672,768
+R=./src/IU_Adder.v|21
+Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
+
 [InstructionMemory]
-A/InstructionMemory=22|./src/InstructionMemory.v|20|1*18959
-BinI32/InstructionMemory=3*14428
+A/InstructionMemory=22|./src/InstructionMemory.v|20|1*86216
+BinI32/InstructionMemory=3*65124
 P/~emb=144,330,510,604
 R=./src/InstructionMemory.v|20
 Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
 
 [MUX2]
-A/MUX2=22|./src/MUX2.v|23|1*16408
-BinI32/MUX2=3*12395
+A/MUX2=22|./src/MUX2.v|23|1*83665
+BinI32/MUX2=3*63113
 P/~emb=213,372,540,616
 R=./src/MUX2.v|23
 Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
 
 [SignExtend]
-A/SignExtend=22|./src/SignExtend.v|21|1*20963
-BinI32/SignExtend=3*15403
+A/SignExtend=22|./src/SignExtend.v|21|1*87782
+BinI32/SignExtend=3*65960
 P/~emb=129,286,437,507
 R=./src/SignExtend.v|21
 Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
@@ -40,26 +61,44 @@ P/~emb=213,373,541,617
 R=./src/PCMux.v|22
 Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
 
+[queue_data]
+A/queue_data=22|./src/queue.v|1|1*31728
+BinI32/queue_data=3*25585
+P/~emb=194,597,896,1011
+R=./src/queue.v|1
+Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
+
 [~A]
-LastVerilogToplevel=SignExtend
-ModifyID=228
+LastVerilogToplevel=IULogical
+ModifyID=866
 Version=73
+c:/My_Designs/SPARC/SPARC/src/Adder.v=0*29951*30316
+c:/My_Designs/SPARC/SPARC/src/IUAdder.v=0*73248*73903
+c:/My_Designs/SPARC/SPARC/src/IU_Adder.v=0*31887*32335
 c:/My_Designs/SPARC/SPARC/src/MUX2.v=0*4452*4848
 c:/My_Designs/SPARC/SPARC/src/MUX2.v_Adder.v=0*9352*9820
 c:/My_Designs/SPARC/SPARC/src/MUX2.v_Adder.v_InstructionMemory.v=0*16210*16842
+c:/My_Designs/SPARC/SPARC/src/MUX2.v_Adder.v_InstructionMemory.v_SignExtend.v=0*22188*22897
+c:/My_Designs/SPARC/SPARC/src/MUX2.v_Adder.v_InstructionMemory.v_SignExtend.v_IUAdder.v=0*64119*65094
+c:/My_Designs/SPARC/SPARC/src/MUX2.v_Adder.v_InstructionMemory.v_SignExtend.v_IUAdder.v_IULogical.v=0*79470*80553
 c:/My_Designs/SPARC/SPARC/src/PCMux.v=0*918*1315
 c:/My_Designs/SPARC/SPARC/src/SignExtend.v=0*18212*18598
+c:/My_Designs/SPARC/SPARC/src/queue.v=0*27946*28663
 
 [~MFT]
-0=43|0SPARC.mgf|18598|2891
-1=37|1SPARC.mgf|20963|14963
-3=37|3SPARC.mgf|15403|10885
+0=173|0SPARC.mgf|80553|17696
+1=145|1SPARC.mgf|91144|76568
+3=145|3SPARC.mgf|68960|55512
 
 [~U]
-$root=12|0*17339|
-Adder=12|0*14775||0x90
-InstructionMemory=12|0*15411||0x90
-MUX2=12|0*14008||0x90
-SignExtend=12|0*17537||0x90
+$root=12|0*74343|
+Adder=12|0*75356||0x90
+IUAdder=12|0*77466||0x90
+IULogical=12|0*79040||0x90
+IU_Adder=12|0*30984||0x90
+InstructionMemory=12|0*75992||0x90
+MUX2=12|0*74589||0x90
+SignExtend=12|0*76791||0x90
 mux2=12|0*150||0x90
+queue_data=12|0*26476||0x90
 

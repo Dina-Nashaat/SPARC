@@ -2,3 +2,5 @@ i<>.\src\MUX2.v
 i<>.\src\Adder.v
 i<>.\src\InstructionMemory.v
 i<>.\src\SignExtend.v
+i<>.\src\IUAdder.v
+i<>.\src\IULogical.v

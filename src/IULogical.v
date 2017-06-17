@@ -1,29 +1,30 @@
 //-----------------------------------------------------------------------------
 //
-// Title       : Adder
+// Title       : IULogical
 // Design      : SPARC
 // Author      : Dina
+// Company     : Dina
 //
 //-----------------------------------------------------------------------------
 //
-// File        : Adder.v
-// Generated   : Wed Jun 12 22:07:50 2013
+// File        : IULogical.v
+// Generated   : Thu Jun 13 02:59:02 2013
 // From        : interface description file
 // By          : Itf2Vhdl ver. 1.22
 //
 //-----------------------------------------------------------------------------
 //
-// Description : A module that adds two 32bit input values,
+// Description : 
 //
 //-----------------------------------------------------------------------------
 `timescale 1 ns / 1 ps
 
-module Adder(
+//{{ Section below this comment is automatically maintained
+//   and may be overwritten
+//{module {IULogical}}
+module IULogical ();
+//}} End of automatically maintained section
 
-	input [31:0] a, b, 
-	output [31:0] y
-);					   
-
-assign y = a + b;
+// -- Enter your statements here -- //
 
 endmodule
