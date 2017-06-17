@@ -1,8 +1,8 @@
-timestamp=1497664911846
+timestamp=1497731793403
 
 [$root]
-A/$root=22|""|0|1*119655
-BinI32/$root=3*86400
+A/$root=22|""|0|1*137123
+BinI32/$root=3*96641
 Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
 
 [Adder]
@@ -20,10 +20,10 @@ R=./src/IUAdder.v|21
 Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
 
 [IULogical]
-A/IULogical=22|./src/IULogical.v|13|1*120141
-BinI32/IULogical=3*86539
-P/~emb=238,511,1087,1235
-R=./src/IULogical.v|13
+A/IULogical=22|./src/IUMultiplier.v|13|1*137609
+BinI32/IULogical=3*96780
+P/~emb=267,541,1006,1144
+R=./src/IUMultiplier.v|13
 Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
 
 [IU_Adder]
@@ -77,11 +77,12 @@ Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f53702001450030
 
 [~A]
 LastVerilogToplevel=IULogical
-ModifyID=1155
+ModifyID=1270
 Version=73
 c:/My_Designs/SPARC/SPARC/src/Adder.v=0*29951*30316
 c:/My_Designs/SPARC/SPARC/src/IUAdder.v=0*98846*99549
-c:/My_Designs/SPARC/SPARC/src/IULogical.v=0*109894*110599
+c:/My_Designs/SPARC/SPARC/src/IULogical.v=0*119351*120088
+c:/My_Designs/SPARC/SPARC/src/IUMultiplier.v=0*125638*126362
 c:/My_Designs/SPARC/SPARC/src/IU_Adder.v=0*31887*32335
 c:/My_Designs/SPARC/SPARC/src/MUX2.v=0*4452*4848
 c:/My_Designs/SPARC/SPARC/src/MUX2.v_Adder.v=0*9352*9820
@@ -95,15 +96,15 @@ c:/My_Designs/SPARC/SPARC/src/SignExtend.v=0*18212*18598
 c:/My_Designs/SPARC/SPARC/src/queue.v=0*27946*28663
 
 [~MFT]
-0=234|0SPARC.mgf|110599|26372
-1=194|1SPARC.mgf|120141|103212
-3=194|3SPARC.mgf|86539|72184
+0=262|0SPARC.mgf|126362|30972
+1=214|1SPARC.mgf|137609|120680
+3=214|3SPARC.mgf|96780|82425
 
 [~U]
-$root=12|0*107713|
+$root=12|0*123691|
 Adder=12|0*82130||0x90
 IUAdder=12|0*97098||0x90
-IULogical=12|0*107959||0x90
+IULogical=12|0*123937||0x90
 IU_Adder=12|0*30984||0x90
 InstructionMemory=12|0*82766||0x90
 MUX2=12|0*81363||0x90

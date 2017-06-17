@@ -37,6 +37,12 @@ CompileWithDebug=0
 SPARC=.
 Active_lib=
 
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+
 [Files]
 /MUX2.v=-1
 /Adder.v=-1
@@ -46,6 +52,7 @@ Active_lib=
 /IULogical.v=-1
 /Instruction_Decode.v=-1
 /Reg_file.v=-1
+/IUMultiplier.v=-1
 
 [Files.Data]
 .\src\MUX2.v=Verilog Source Code
@@ -56,9 +63,5 @@ Active_lib=
 .\src\IULogical.v=Verilog Source Code
 .\src\Instruction_Decode.v=Verilog Source Code
 .\src\Reg_file.v=Verilog Source Code
+.\src\IUMultiplier.v=Verilog Source Code
 
-[HierarchyViewer]
-SortInfo=u
-HierarchyInformation=
-ShowHide=ShowTopLevel
-Selected=

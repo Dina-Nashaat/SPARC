@@ -18,7 +18,8 @@ module IULogical (
 	);
 	
 	reg icc_n, icc_z, icc_c, icc_v;
-	initial begin
+	initial begin					   
+		//______LOGICAL INSTRUCTIONS B.11._______
 		case (op)
 			6'b000001:	   						//AND
 			result = A & B;
@@ -37,7 +38,7 @@ module IULogical (
 			begin
 			result = A & B;
 			icc_n = result[31];
-			icc_z = (result == 31'b0);
+			icc_z = (result == 32'b0);
 			icc_v = 1'b0;
 			icc_c = 1'b0;
 			end			 
@@ -45,7 +46,7 @@ module IULogical (
 			begin
 			result = A & ~(B);
 			icc_n = result[31];
-			icc_z = (result == 31'b0);
+			icc_z = (result == 32'b0);
 			icc_v = 1'b0;
 			icc_c = 1'b0;
 			end
@@ -53,7 +54,7 @@ module IULogical (
 			begin
 			result = A | B;
 			icc_n = result[31];
-			icc_z = (result == 31'b0);
+			icc_z = (result == 32'b0);
 			icc_v = 1'b0;
 			icc_c = 1'b0;
 			end
@@ -61,7 +62,7 @@ module IULogical (
 			begin
 			result = A | ~(B);
 			icc_n = result[31];
-			icc_z = (result == 31'b0);
+			icc_z = (result == 32'b0);
 			icc_v = 1'b0;
 			icc_c = 1'b0;
 			end
@@ -69,7 +70,7 @@ module IULogical (
 			begin
 			result = A ^ B;
 			icc_n = result[31];
-			icc_z = (result == 31'b0);
+			icc_z = (result == 32'b0);
 			icc_v = 1'b0;
 			icc_c = 1'b0;
 			end
@@ -77,10 +78,16 @@ module IULogical (
 			begin
 			result = ~(A ^ B);
 			icc_n = result[31];
-			icc_z = (result == 31'b0);
+			icc_z = (result == 32'b0);
 			icc_v = 1'b0;
 			icc_c = 1'b0;
-			end
+			end	  
+			
+			//______SHIFT INSTRUCTIONS B.11._______
+			
+			6'b100101: result = A << B; 			//SLL
+			6'b100110: result = A >> B;				//SRL
+			6'b100111: result = A >>> B;			//SRA
 		endcase
 	end	
 	assign flags[0] = icc_c;

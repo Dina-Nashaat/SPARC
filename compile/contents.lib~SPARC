@@ -1,12 +1,12 @@
-1155
+1270
 ~M 0 "" 0 $root
 ~A 1 "" 0 $root
 ~M 3 "./src/Adder.v" 21 Adder
 ~A 1 "./src/Adder.v" 21 Adder
 ~M 3 "./src/IUAdder.v" 21 IUAdder
 ~A 1 "./src/IUAdder.v" 21 IUAdder
-~M 3 "./src/IULogical.v" 13 IULogical
-~A 1 "./src/IULogical.v" 13 IULogical
+~M 3 "./src/IUMultiplier.v" 13 IULogical
+~A 1 "./src/IUMultiplier.v" 13 IULogical
 ~M 3 "./src/IU_Adder.v" 21 IU_Adder
 ~A 1 "./src/IU_Adder.v" 21 IU_Adder
 ~M 3 "./src/InstructionMemory.v" 20 InstructionMemory
