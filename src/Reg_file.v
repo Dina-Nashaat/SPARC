@@ -1,6 +1,6 @@
 module Reg_file(
-	input clk;                  //The system clock.	
-	input reg_write; 			//control signal 1 for write to the register file, 0 for read from the register file	
+	input clk;					//The system clock.	
+	input reg_write;			//control signal 1 for write to the register file, 0 for read from the register file	
 	input [4:0] reg_adress;		//adress of the register
 	input [31:0] data_write;	//data to be written to the register file of (reg_write=1)
 	output [31:0] data_read;	//data to be read from the register file of (reg_write=0)
