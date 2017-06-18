@@ -7,3 +7,4 @@
 .\src\Instruction_Decode.v
 .\src\Reg_file.v
 .\src\IUMultiplier.v
+.\src\rs_mul.v
