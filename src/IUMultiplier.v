@@ -83,10 +83,92 @@ module IULogical (
 				icc_v = 1'b0;
 				icc_c = 1'b0;
 			end
+			
+			6'b001110:									//UDIV
+			begin
+				reg [31:0] quotient;
+				reg [63:0] dividend;
+				reg [31:0] divisor;
+				reg [31:0] remainder;
+				
+				dividend = 	{Yreg, A};
+				quotient = dividend / divisor;
+				remainder = dividend % divisor;
+				
+				quotient = (((quotient + remainder) > (2^32)-1) & remainder == divisor - 1) ? ((2^32) - 1) :(dividend/divisor);
+				
+				rd = quotient[31:0];
+				
+				
+				rd = quotient[31:0];
+			end		 
+			
+			6'b001111:									//SDIV
+			begin
+				reg signed [31:0] quotient;
+				reg signed [63:0] dividend;
+				reg signed [31:0] divisor;	   
+				reg signed [31:0] remainder;
+				reg [31:0] mod;
+				
+				dividend = {Yreg, A};
+				quotient = dividend / divisor;	   
+			
+				mod = (divisor<0)? -divisor : divisor;
+				quotient = (((quotient + remainder) > (2^31)-1) & remainder == mod - 1) ? ((2^31) - 1) :(dividend/divisor) ;
+				
+				rd = quotient[31:0];
+			end	
+			
+			6'b011110:									//UDIVcc
+			begin
+				reg [31:0] quotient;
+				reg [63:0] dividend;
+				reg [31:0] divisor;
+				reg [31:0] remainder;
+				
+				dividend = 	{Yreg, A};
+				quotient = dividend / divisor;
+				remainder = dividend % divisor;
+				
+				quotient = (((quotient + remainder) > (2^32)-1) & remainder == divisor - 1) ? ((2^32) - 1) :(dividend/divisor) ;
+				
+				rd = quotient[31:0];
+				
+				icc_n = quotient[31];
+				icc_z = (quotient[31:0] == 32'b0);
+				icc_v = (((quotient + remainder) > (2^32)-1) & remainder == divisor - 1) ? 1 :0;
+				icc_c = 1'b0;
+			end
+			
+			6'b011111:									//SDIVcc
+			begin
+				reg signed [31:0] quotient;
+				reg signed [63:0] dividend;
+				reg signed [31:0] divisor;
+				reg [31:0] remainder;
+				reg [31:0] mod;
+				
+				dividend = {Yreg, A};
+				
+				quotient = dividend / divisor;
+				remainder = dividend % divisor;
+				
+				mod = (divisor<0)? -divisor : divisor;
+				quotient = (((quotient + remainder) > (2^31)-1) & remainder == mod - 1) ? ((2^31) - 1) :(dividend/divisor) ;
+				
+				rd = quotient[31:0];
+				
+				icc_n = quotient[31];
+				icc_z = (quotient[31:0] == 32'b0);
+				icc_v = (((quotient + remainder) > (2^31)-1) & remainder == divisor - 1) ? 1 :0;
+				icc_c = 1'b0;
+			end
 		endcase
 	end	
 	assign flags[0] = icc_c;
 	assign flags[1] = icc_v;
 	assign flags[2] = icc_z;
-	assign flags[3] = icc_n;
+	assign flags[3] = icc_n;	  
+	
 endmodule
