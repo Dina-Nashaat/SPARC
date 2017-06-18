@@ -53,6 +53,7 @@ Selected=
 /Instruction_Decode.v=-1
 /Reg_file.v=-1
 /IUMultiplier.v=-1
+/rs_mul.v=-1
 
 [Files.Data]
 .\src\MUX2.v=Verilog Source Code
@@ -64,4 +65,5 @@ Selected=
 .\src\Instruction_Decode.v=Verilog Source Code
 .\src\Reg_file.v=Verilog Source Code
 .\src\IUMultiplier.v=Verilog Source Code
+.\src\rs_mul.v=Verilog Source Code
 

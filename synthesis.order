@@ -7,3 +7,4 @@ i<>.\src\IULogical.v
 i<>.\src\Instruction_Decode.v
 i<>.\src\Reg_file.v
 i<>.\src\IUMultiplier.v
+i<>.\src\rs_mul.v

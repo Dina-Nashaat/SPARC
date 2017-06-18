@@ -12,12 +12,15 @@ module Instruction_Decode(
 	output signed_mul;				//Conrol signal that determine signed/unsigned multiplication
 	output left_shift;			    //Control signal that determine left/right shift
 	output arith_shift;			    //Control signal that determine logical/arithmetic shift
+	output brach_taken;				//Control signal that determine whether a branch is taken or not 
+
 
 	/*Input to next stage */	
 	output [31:0] src_a;      //The first operand:  The first source register for the address of memory access/ The first source in arithmetic operations
 	output [31:0] src_b;      //The second operand: The second source register for the address of memory access/ The second source in arithmetic operations
 	output [31:0] src_c;      //The third operand  :the storage value of a store instruction	 
 	output [4:0] rd;          //The destination register needed in WB step	
+	output [31:0] branch_target; //The branch target address for a branch instruction .
 );
 	
 
@@ -200,11 +203,23 @@ always @(posedge clk)
 								end	  
 						endcase	
 				end//case(arithmetic instruction)
-			/*Branch Instruction*/	
+			/*Branch & NOP Instruction*/	
 			2'b00:
 				begin
-			
-				end//case(branch instruction)
+					/*Branch Instruction */
+					case(instruction[28:25])
+						begin
+							4'b1000 ://(ba),Branch Always taken
+								begin 
+									branch_taken=1;
+									branch_target=instruction[21:0];
+								end
+							4'b0000 ://(bn),Branch Never taken
+								begin 
+									branch_taken=0;
+                				end
+						endcase //branch instruction
+				end//case(branch & NOP instruction)
 		endcase//case(instruction[31:30])
 	end//always @(posedge clk)	
 	

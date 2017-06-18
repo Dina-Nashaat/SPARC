@@ -17,11 +17,12 @@ MESSAGE_SP VCP2113 "Module SignExtend found in current working library."
 MESSAGE_SP VCP2113 "Module queue_data found in current working library."
 MESSAGE_SP VCP2113 "Module IU_Adder found in current working library."
 MESSAGE_SP VCP2113 "Module IUAdder found in current working library."
-MESSAGE_SP VCP2113 "Module Reg_file found in current working library."
+MESSAGE_SP VCP2113 "Module IULogical found in current working library."
+MESSAGE_SP VCP2113 "Module MUL_RS found in current working library."
 UPDATEPROGRESS 90
 UPDATEPROGRESS 100
-MESSAGE "Unit top modules: IULogical."
-MESSAGE "$root top modules: mux2 MUX2 Adder InstructionMemory SignExtend queue_data IU_Adder IUAdder IULogical Reg_file."
+MESSAGE "Unit top modules: Reg_file."
+MESSAGE "$root top modules: mux2 MUX2 Adder InstructionMemory SignExtend queue_data IU_Adder IUAdder IULogical Reg_file MUL_RS."
 ENDPROGRESS Compiling...
 SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 0[s]."
 MESSAGE "done"
