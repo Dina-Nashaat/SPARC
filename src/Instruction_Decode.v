@@ -1,40 +1,26 @@
 module Instruction_Decode(
-	clk,
-	instruction, 
-	mem_write,
-    mem_read,
-    reg_write,
-	mem_access_size,
-	mem_access_signed,
-	ALU_op,
-	signed_mul,
-	left_shift,
-	arith_shift,
-	src_a,
-	src_b,
-	src_c,
-	rd);
+	/*Control signals*/
+	output mem_write;         		//Control signal that enables writing to memory.
+	output mem_read;          		//Control signal that enables reading from memory.
+	output reg_write;         		//Control signal that enables writing to register file.
+	output [1:0] mem_access_size;   //Control signal that determines whether the memory access is for byte(00), half-word(01), word(10), double-word(11).
+	output mem_access_signed;       //Control signal that determines (in case of byte and halfword memory access)whether the memory access is signed or unsigned.
+	output [2:0]ALU_op; 			//Control signal that determine ALU Operation; AND(000), OR(001), ADD(010), SUB(011), MUL(100), DIV(101) 
+	output signed_mul;				//Conrol signal that determine signed/unsigned multiplication
+	output left_shift;			    //Control signal that determine left/right shift
+	output arith_shift;			    //Control signal that determine logical/arithmetic shift
+
+	/*Input to next stage */	
+	output [31:0] src_a;      //The first operand:  The first source register for the address of memory access/ The first source in arithmetic operations
+	output [31:0] src_b;      //The second operand: The second source register for the address of memory access/ The second source in arithmetic operations
+	output [31:0] src_c;      //The third operand  :the storage value of a store instruction	 
+	output [4:0] rd;          //The destination register needed in WB step	
+);
 	
 input clk;               //The system clock.
 input [31:0]instruction; //The 32 bit instruction.	
 
 
-/*Control signals*/
-output mem_write;         		//Control signal that enables writing to memory.
-output mem_read;          		//Control signal that enables reading from memory.
-output reg_write;         		//Control signal that enables writing to register file.
-output [1:0] mem_access_size;   //Control signal that determines whether the memory access is for byte(00), half-word(01), word(10), double-word(11).
-output mem_access_signed;       //Control signal that determines (in case of byte and halfword memory access)whether the memory access is signed or unsigned.
-output [2:0]ALU_op; 			//Control signal that determine ALU Operation; AND(000), OR(001), ADD(010), SUB(011), MUL(100), DIV(101) 
-output signed_mul;				//Conrol signal that determine signed/unsigned multiplication
-output left_shift;			    //Control signal that determine left/right shift
-output arith_shift;			    //Control signal that determine logical/arithmetic shift
-
-/*Input to next stage */	
-output [31:0] src_a;      //The first operand:  The first source register for the address of memory access/ The first source in arithmetic operations
-output [31:0] src_b;      //The second operand: The second source register for the address of memory access/ The second source in arithmetic operations
-output [31:0] src_c;      //The third operand  :the storage value of a store instruction	 
-output [4:0] rd;          //The destination register needed in WB step	
 
 reg mem_write; 
 reg mem_read;              
