@@ -13,14 +13,14 @@ module Instruction_Decode(
 	output left_shift;			    //Control signal that determine left/right shift
 	output arith_shift;			    //Control signal that determine logical/arithmetic shift
 	output brach_taken;				//Control signal that determine whether a branch is taken or not 
-
+	output icc;						//control signal that enables writing in integer condition codes bits in PCR special register
 
 	/*Input to next stage */	
 	output [31:0] src_a;      //The first operand:  The first source register for the address of memory access/ The first source in arithmetic operations
 	output [31:0] src_b;      //The second operand: The second source register for the address of memory access/ The second source in arithmetic operations
 	output [31:0] src_c;      //The third operand  :the storage value of a store instruction	 
 	output [4:0] rd;          //The destination register needed in WB step	
-	output [31:0] branch_target; //The branch target address for a branch instruction .
+	output [31:0] branch_displacement; //The branch displacement address for a branch instruction .
 );
 	
 
@@ -37,6 +37,9 @@ reg [31:0] src_c;
 reg [4:0] rd; 
 
 
+/* internal registers */
+reg [31:0] PCR_reg;
+
 always @(posedge clk) 
 	begin
 /* begin decoding*/ 
@@ -44,6 +47,7 @@ always @(posedge clk)
 		mem_write=0;
 		mem_read=0;
 		reg_write=0;
+		icc=0;
 		case(instruction[31:30])
 			/*Memory instructions*/
 			2'b11:
@@ -160,31 +164,68 @@ always @(posedge clk)
 								begin
 									ALU_op=2;
 								end
-							6'b00100://(sub)
+							6'b010000://(addcc), add + modify ICC
+								begin
+									ALU_op=2;
+									icc=1;
+								end	
+							6'b000100://(sub)
 								begin
 									ALU_op=3;
-								end	
+								end
+							6'b0101000://(subcc), sub + modify ICC
+								begin
+									ALU_op=3;
+									icc=1;
+								end									
 							6'b001010://(umul),Unsigned Integer Multiply  
 								begin 
 									ALU_op=4;
 									signed_mul=0;
+								end
+							6'b011010://(umulcc),umul + modify ICC  
+								begin 
+									ALU_op=4;
+									signed_mul=0;
+									icc=1;
 								end
 							6'b001011://(smul),Signed Integer Multiply 
 								begin
 									ALU_op=4;
 									signed_mul=1;
 								end
+							6'b011011://(smulcc),smulcc + modify ICC 
+								begin
+									ALU_op=4;
+									signed_mul=1;
+									icc=1;
+								end	
 							6'b001110://(udiv),Unsigned Integer Divide 
 								begin 
 									ALU_op=5;
 								end
+							6'b011110://(udivc),udiv + modify ICC 
+								begin 
+									ALU_op=5;
+									icc=1;
+								end	
 							6'b000001://(and)
 								begin 
 									ALU_op=0;
 								end
+							6'b010001://(andcc),and + modify ICC
+								begin 
+									ALU_op=0;
+									icc=1;
+								end	
 							6'b000010://(or)
 								begin 
 									ALU_op=1;
+								end
+							6'b010010://(orcc),or + modify ICC
+								begin 
+									ALU_op=1;
+									icc=1;
 								end	
 							6'b100101://(sll),Shift Left Logical
 								begin  	
@@ -209,15 +250,35 @@ always @(posedge clk)
 					/*Branch Instruction */
 					case(instruction[28:25])
 						begin
-							4'b1000 ://(ba),Branch Always taken
+							4'b1000://(ba),Branch Always taken
 								begin 
 									branch_taken=1;
-									branch_target=instruction[21:0];
+									branch_displacement={{8{instruction[21]}},instruction[21:0]};//sign extended to 32 bit 
 								end
-							4'b0000 ://(bn),Branch Never taken
+							4'b0000://(bn),Branch Never taken
 								begin 
 									branch_taken=0;
                 				end
+							4'b1001://(bne),Branch on Not Equal not Z
+								begin
+									PCR_reg=reg_file[11111];///--->call reg_file module here 
+									branch_taken=!PCR_reg[22];
+								end
+							4'b0001://(be),Branch on Equal Z
+								begin 
+									PCR_reg=reg_file[11111];///--->call reg_file module here 
+									branch_taken=PCR_reg[22];
+								end
+							4'b1110://(bpos),Branch on Positive not N
+								begin 
+                 					PCR_reg=reg_file[11111];///--->call reg_file module here 
+									branch_taken=!PCR_reg[23];
+                 				end  
+							4'b0110://(bneg),Branch on Negative
+								begin
+                  					PCR_reg=reg_file[11111];///--->call reg_file module here 
+									branch_taken=!PCR_reg[23];
+								end
 						endcase //branch instruction
 				end//case(branch & NOP instruction)
 		endcase//case(instruction[31:30])
