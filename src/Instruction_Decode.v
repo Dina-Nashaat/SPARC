@@ -24,19 +24,6 @@ module Instruction_Decode(
 );
 	
 
-reg mem_write; 
-reg mem_read;              
-reg reg_write;
-reg	[1:0] mem_access_size;
-reg mem_access_signed;    
-reg [2:0]ALU_op;
-reg signed_mul;
-reg [31:0] src_a;       
-reg [31:0] src_b;      
-reg [31:0] src_c;
-reg [4:0] rd; 
-
-
 /* internal registers */
 reg [31:0] PCR_reg;
 
@@ -97,7 +84,7 @@ always @(posedge clk)
 										mem_access_size=2;
 										mem_access_signed=0;
 									end
-								6'b000011: //(ld1),Load Double Word
+								6'b000011: //(ldd),Load Double Word
 									begin 
 										mem_access_size=3;
 										mem_access_signed=0;
@@ -248,12 +235,12 @@ always @(posedge clk)
 			2'b00:
 				begin
 					/*Branch Instruction */
+					branch_displacement={{8{instruction[21]}},instruction[21:0]};//sign extended to 32 bit 
 					case(instruction[28:25])
 						begin
 							4'b1000://(ba),Branch Always taken
 								begin 
 									branch_taken=1;
-									branch_displacement={{8{instruction[21]}},instruction[21:0]};//sign extended to 32 bit 
 								end
 							4'b0000://(bn),Branch Never taken
 								begin 
