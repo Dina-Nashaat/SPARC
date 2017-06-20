@@ -1,4 +1,5 @@
-module CDB(
+module CDB
+(
   input wire clk,
 
   input wire in_request_add,
@@ -34,7 +35,8 @@ initial begin
   out_val = 32'bx;
 end
 
-always @(in_request_add or in_request_logic or in_request_mul or in_request_load or in_request_store) begin
+always @(posedge clk or in_request_add or in_request_logic or in_request_mul
+         or in_request_load or in_request_store) begin
 
   if (in_request_add == 1'b1) begin
     out_broadcast = 1'b0;
