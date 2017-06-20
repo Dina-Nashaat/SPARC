@@ -156,7 +156,7 @@ always @(posedge clk) begin
       if (rs[i_4][4:0] == INVALID_TAG && rs[i_4][9:5] == INVALID_TAG) begin
 
         rs[i_4][107:107] = 1'b1;
-        $display("At time %4t, execute tag : %3d\n", $time, rs[i_4][84:80]);
+        $display("At cycle %4t, execute tag : %3d\n", $time/5, rs[i_4][84:80]);
 
         if (rs[i_4][79:74] == UMUL || rs[i_4][79:74] == UMUL_CC) begin
           result = #20 rs[i_4][41:10] * rs[i_4][73:42];

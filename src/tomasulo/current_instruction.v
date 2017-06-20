@@ -72,7 +72,7 @@ always @(posedge in_CDB_broadcast) begin
 end
 
 always @(posedge in_rs_enable) begin
-  $display("At time %4t, issue tag: %4d\n", $time, in_rs_tag);
+  $display("At cycle %4t, issue tag: %4d\n", $time/5, in_rs_tag);
   out_bank_reg = in_reg_3;
   out_bank_tag = in_rs_tag;
   out_bank_enable = 1'b1;
@@ -83,7 +83,7 @@ end
 
 integer j = 1;
 always @(posedge in_fetch_next) begin
-  // $display("At time %4t, fetch: %3d\n", $time, j);
+  // $display("At cycle %4t, fetch: %3d\n", $time/5, j);
   j = j + 1;
   out_fetch_next = 1'b0;
   out_reg_1 = in_reg_1;
