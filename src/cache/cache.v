@@ -1,3 +1,4 @@
+`include "../memory/memory.v"
 module data_cache #(parameter CACHE_WIDTH = 32, ADDR_WIDTH = 32) // 32-bit Cache
 (
   input wire [ADDR_WIDTH-1 : 0] addr,                      // Memory Address
@@ -6,8 +7,11 @@ module data_cache #(parameter CACHE_WIDTH = 32, ADDR_WIDTH = 32) // 32-bit Cache
   input wire clk,                                          // All synchronous elements,
                                                            // including memories,
                                                            // should have a clock
-  output reg [CACHE_WIDTH-1 : 0] read_data                   // Output of Memory
+  input wire enable,
+  output reg [CACHE_WIDTH-1 : 0] read_data,                // Output of Memory
                                                            // Address Contents
+  output reg write_finished,
+  output reg read_finished
 );
 
 parameter CACHE_SIZE = 2 ** 13;                            // 4 * 8 Kilo Byte Cache
@@ -29,36 +33,51 @@ reg flag;
 reg [TAG_SIZE-1 : 0] tag_reg;
 integer cur_set_num, rand_block_num, loop_set_num, loop_i;
 
+initial begin
+  write_finished = 1'b0;
+  read_finished = 1'b0;
+end
+
 data_memory MEMO (addr_wire, write_data_wire, memwrite_wire, clk, read_data_wire);
 
-always @(posedge clk) begin
-
+always @(posedge enable) begin
   flag = 1'b0;
   // random = $urandom_range(BLOCKS_IN_SET, 0);
-  random = $random;
+  random = $random % BLOCKS_IN_SET;
   cur_set_num = (addr/BLOCK_SIZE) % SET_COUNT;
   tag_reg = addr[CACHE_WIDTH-1 : CACHE_WIDTH-TAG_SIZE];
   rand_block_num = BLOCKS_IN_SET*cur_set_num + random;
 
   if (memwrite == 1'b1) begin                              // Write to Cache
-    CACHE[rand_block_num] = #205 write_data;
-    TAGS[rand_block_num] <= tag_reg;
+    #200;
+    CACHE[rand_block_num] = write_data;
+    TAGS[rand_block_num] = tag_reg;
+    write_finished = 1'b1;
+    #5;
+    write_finished = 1'b0;
   end
 
   if (memwrite == 1'b0) begin                              // Read from Cache
     for(loop_i = 0 ; loop_i < BLOCKS_IN_SET; loop_i = loop_i+1) begin
       loop_set_num = BLOCKS_IN_SET*cur_set_num + loop_i;
       if(TAGS[loop_set_num] == tag_reg) begin              // Hit (found in Cache)
-        read_data <= #5 CACHE[loop_set_num];
+        #5;
+        read_data = CACHE[loop_set_num];
         flag = 1'b1;
+        read_finished = 1'b1;
+        #5;
+        read_finished = 1'b0;
       end
     end
     if(flag == 1'b0) begin                                 // Miss (not found in Cache)
-      CACHE[rand_block_num] = #5 read_data_wire;
-      read_data <= CACHE[rand_block_num];
+      CACHE[rand_block_num] = read_data_wire;
+      #1;
+      read_data = CACHE[rand_block_num];
+      read_finished = 1'b1;
+      #5;
+      read_finished = 1'b0;
     end
   end
-
 end
 
 endmodule
