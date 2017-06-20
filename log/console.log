@@ -1,73 +1,9 @@
-alog -O2 -sve  -work SPARC $dsn/src/MUX2.v $dsn/src/Adder.v $dsn/src/InstructionMemory.v $dsn/src/SignExtend.v $dsn/src/IUAdder.v $dsn/src/IULogical.v $dsn/src/Instruction_Decode.v $dsn/src/Reg_file.v $dsn/src/IUMultiplier.v
+alog -O2 -sve  -work SPARC $dsn/src/shiftBy2.v
 # Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
 # Compile...
 # Pass 1. Scanning modules hierarchy.
 # Info: VCP2113 Module \$root found in current working library.
-# Error: VCP2000 Instruction_Decode.v : (2, 15): Syntax error. Unexpected token: ;. Expected tokens: ',' , ')'.
-# Error: VCP2000 Instruction_Decode.v : (37, 7): Syntax error. Unexpected token: always[_ALWAYS]. Expected tokens: 'function' , 'task' , 'timeprecision' , 'timeunit' , 'const' ... .
-# Error: VCP2000 Reg_file.v : (2, 15): Syntax error. Unexpected token: ;. Expected tokens: ',' , ')'.
-# Error: VCP2000 Reg_file.v : (17, 7): Syntax error. Unexpected token: always[_ALWAYS]. Expected tokens: 'function' , 'task' , 'timeprecision' , 'timeunit' , 'const' ... .
-# Error: VCP1023 IUMultiplier.v : (11, 11): Compiler directive `timescale is not allowed inside a module.
-# Error: VCP2545 IUMultiplier.v : (14, 18): Duplicate port identifier: clk
-# Error: VCP2562 IUMultiplier.v : (14, 18): Redeclaration of port clk.
-# Compile failure 7 Errors 0 Warnings  Analysis time: 0[s].
-alog -O2 -sve  -work SPARC $dsn/src/MUX2.v $dsn/src/Adder.v $dsn/src/InstructionMemory.v $dsn/src/SignExtend.v $dsn/src/IUAdder.v $dsn/src/IULogical.v $dsn/src/Instruction_Decode.v $dsn/src/Reg_file.v $dsn/src/IUMultiplier.v
-# Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# Compile...
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
-# Error: VCP2000 Instruction_Decode.v : (2, 15): Syntax error. Unexpected token: ;. Expected tokens: ',' , ')'.
-# Error: VCP2000 Instruction_Decode.v : (37, 7): Syntax error. Unexpected token: always[_ALWAYS]. Expected tokens: 'function' , 'task' , 'timeprecision' , 'timeunit' , 'const' ... .
-# Error: VCP2000 Reg_file.v : (2, 15): Syntax error. Unexpected token: ;. Expected tokens: ',' , ')'.
-# Error: VCP2000 Reg_file.v : (17, 7): Syntax error. Unexpected token: always[_ALWAYS]. Expected tokens: 'function' , 'task' , 'timeprecision' , 'timeunit' , 'const' ... .
-# Error: VCP1023 IUMultiplier.v : (11, 11): Compiler directive `timescale is not allowed inside a module.
-# Error: VCP2545 IUMultiplier.v : (14, 18): Duplicate port identifier: clk
-# Error: VCP2562 IUMultiplier.v : (14, 18): Redeclaration of port clk.
-# Compile failure 7 Errors 0 Warnings  Analysis time: 0[s].
-alog -O2 -sve  -work SPARC $dsn/src/IUMultiplier.v
-# Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# Compile...
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
-# Pass 2. Processing instantiations.
-# Pass 3. Processing behavioral statements.
-# Running Optimizer.
-# ELB/DAG code generating.
-# Info: VCP2113 Module \$root found in current working library.
-# Info: VCP2113 Module mux2 found in current working library.
-# Info: VCP2113 Module MUX2 found in current working library.
-# Info: VCP2113 Module Adder found in current working library.
-# Info: VCP2113 Module InstructionMemory found in current working library.
-# Info: VCP2113 Module SignExtend found in current working library.
-# Info: VCP2113 Module queue_data found in current working library.
-# Info: VCP2113 Module IU_Adder found in current working library.
-# Info: VCP2113 Module IUAdder found in current working library.
-# Info: VCP2113 Module Reg_file found in current working library.
-# Unit top modules: IULogical.
-# $root top modules: mux2 MUX2 Adder InstructionMemory SignExtend queue_data IU_Adder IUAdder IULogical Reg_file.
-# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
-# done
-alog -O2 -sve  -work SPARC $dsn/src/Reg_file.v
-# Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# Compile...
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
-# Error: VCP2000 Reg_file.v : (2, 15): Syntax error. Unexpected token: ;. Expected tokens: ',' , ')'.
-# Error: VCP2000 Reg_file.v : (17, 7): Syntax error. Unexpected token: always[_ALWAYS]. Expected tokens: 'function' , 'task' , 'timeprecision' , 'timeunit' , 'const' ... .
-# Compile failure 2 Errors 0 Warnings  Analysis time: 0[s].
-alog -O2 -sve  -work SPARC $dsn/src/Reg_file.v
-# Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# Compile...
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
-# Error: VCP2000 Reg_file.v : (2, 15): Syntax error. Unexpected token: ;. Expected tokens: ',' , ')'.
-# Error: VCP2000 Reg_file.v : (17, 7): Syntax error. Unexpected token: always[_ALWAYS]. Expected tokens: 'function' , 'task' , 'timeprecision' , 'timeunit' , 'const' ... .
-# Compile failure 2 Errors 0 Warnings  Analysis time: 0[s].
-alog -O2 -sve  -work SPARC $dsn/src/rs_mul.v
-# Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# Compile...
-# Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2876 shiftBy2.v : (4, 1): Implicit net declaration, symbol y has not been declared in module shiftBy2.
 # Pass 2. Processing instantiations.
 # Pass 3. Processing behavioral statements.
 # Running Optimizer.
@@ -83,25 +19,112 @@ alog -O2 -sve  -work SPARC $dsn/src/rs_mul.v
 # Info: VCP2113 Module IUAdder found in current working library.
 # Info: VCP2113 Module IULogical found in current working library.
 # Info: VCP2113 Module Reg_file found in current working library.
-# Unit top modules: MUL_RS.
-# $root top modules: mux2 MUX2 Adder InstructionMemory SignExtend queue_data IU_Adder IUAdder IULogical Reg_file MUL_RS.
+# Info: VCP2113 Module MUL_RS found in current working library.
+# Unit top modules: shiftBy2.
+# $root top modules: mux2 MUX2 Adder InstructionMemory SignExtend queue_data IU_Adder IUAdder IULogical Reg_file MUL_RS shiftBy2.
 # Compile success 0 Errors 0 Warnings  Analysis time: 1[s].
 # done
-alog -O2 -sve  -work SPARC $dsn/src/Reg_file.v
+alog -O2 -sve  -work SPARC $dsn/src/datapath.v
 # Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
 # Compile...
 # Pass 1. Scanning modules hierarchy.
 # Info: VCP2113 Module \$root found in current working library.
-# Warning: VCP2603 Reg_file.v : (10, 15): Port 'reg_write' type is defined in module header and should not be overwritten later in module body (mixing ANSI and NONANSI header style).
-# Warning: VCP2603 Reg_file.v : (11, 22): Port 'reg_adress' type is defined in module header and should not be overwritten later in module body (mixing ANSI and NONANSI header style).
-# Warning: VCP2603 Reg_file.v : (12, 23): Port 'data_write' type is defined in module header and should not be overwritten later in module body (mixing ANSI and NONANSI header style).
-# Warning: VCP2603 Reg_file.v : (13, 22): Port 'data_read' type is defined in module header and should not be overwritten later in module body (mixing ANSI and NONANSI header style).
-# Error: VCP2580 Reg_file.v : (3, 1): Error at port reg_write. Only NET type is allowed for INPUT or INOUT ports.
-# Error: VCP2580 Reg_file.v : (4, 1): Error at port reg_adress. Only NET type is allowed for INPUT or INOUT ports.
-# Error: VCP2580 Reg_file.v : (5, 1): Error at port data_write. Only NET type is allowed for INPUT or INOUT ports.
-# Compile failure 3 Errors 4 Warnings  Analysis time: 0[s].
-alog -O2 -sve  -work SPARC $dsn/src/Reg_file.v
+# Error: VCP2000 datapath.v : (3, 10): Syntax error. Unexpected token: input[_INPUT]. Expected tokens: '[' , ')' , ',' , ';' , '='.
+# Error: VCP2000 datapath.v : (9, 9): Syntax error. Unexpected token: adder[_IDENTIFIER]. Expected tokens: 'function' , 'task' , 'timeprecision' , 'timeunit' , 'const' ... .
+# Compile failure 2 Errors 0 Warnings  Analysis time: 1[s].
+alog -O2 -sve  -work SPARC $dsn/src/datapath.v
 # Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
 # Compile...
 # Pass 1. Scanning modules hierarchy.
-# Info: VCP2113 Module \$root
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module shiftBy2 found in current working library.
+# Warning: VCP2515 datapath.v : (9, 1): Undefined module: adder was used. Port connection rules will not be checked at such instantiations.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module mux2 found in current working library.
+# Info: VCP2113 Module MUX2 found in current working library.
+# Info: VCP2113 Module Adder found in current working library.
+# Info: VCP2113 Module InstructionMemory found in current working library.
+# Info: VCP2113 Module SignExtend found in current working library.
+# Info: VCP2113 Module queue_data found in current working library.
+# Info: VCP2113 Module IU_Adder found in current working library.
+# Info: VCP2113 Module IUAdder found in current working library.
+# Info: VCP2113 Module IULogical found in current working library.
+# Info: VCP2113 Module Reg_file found in current working library.
+# Info: VCP2113 Module MUL_RS found in current working library.
+# Unit top modules: datapath.
+# $root top modules: mux2 MUX2 Adder InstructionMemory SignExtend queue_data IU_Adder IUAdder IULogical Reg_file MUL_RS datapath.
+# Compile success 0 Errors 1 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve  -work SPARC $dsn/src/datapath.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 datapath.v : (12, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE]. Expected tokens: ':' , '#' , '(' , ',' , ';' ... .
+# Info: VCP2113 Module shiftBy2 found in current working library.
+# Info: VCP2113 Module Adder found in current working library.
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve  -work SPARC $dsn/src/datapath.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 datapath.v : (10, 24): Syntax error. Unexpected token: pcadder[_IDENTIFIER]. Expected tokens: '[' , ',' , ';'.
+# Info: VCP2113 Module MUX2 found in current working library.
+# Info: VCP2113 Module shiftBy2 found in current working library.
+# Info: VCP2113 Module Adder found in current working library.
+# Warning: VCP2515 datapath.v : (10, 1): Undefined module: pc was used. Port connection rules will not be checked at such instantiations.
+# Compile failure 1 Errors 1 Warnings  Analysis time: 0[s].
+alog -O2 -sve  -work SPARC $dsn/src/datapath.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module MUX2 found in current working library.
+# Info: VCP2113 Module shiftBy2 found in current working library.
+# Info: VCP2113 Module Adder found in current working library.
+# Pass 2. Processing instantiations.
+# Info: VCP2876 datapath.v : (12, 1): Implicit net declaration, symbol pcsrc has not been declared in module datapath.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module mux2 found in current working library.
+# Info: VCP2113 Module InstructionMemory found in current working library.
+# Info: VCP2113 Module SignExtend found in current working library.
+# Info: VCP2113 Module queue_data found in current working library.
+# Info: VCP2113 Module IU_Adder found in current working library.
+# Info: VCP2113 Module IUAdder found in current working library.
+# Info: VCP2113 Module IULogical found in current working library.
+# Info: VCP2113 Module Reg_file found in current working library.
+# Info: VCP2113 Module MUL_RS found in current working library.
+# Unit top modules: datapath.
+# $root top modules: mux2 InstructionMemory SignExtend queue_data IU_Adder IUAdder IULogical Reg_file MUL_RS datapath.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -O2 -sve  -work SPARC $dsn/src/datapath.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 datapath.v : (17, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE]. Expected tokens: '[' , '(' , ',' , ';'.
+# Info: VCP2113 Module MUX2 found in current working library.
+# Info: VCP2113 Module shiftBy2 found in current working library.
+# Info: VCP2113 Module Adder found in current working library.
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve  -work SPARC $dsn/src/datapath.v
+# Warning: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module MUX2 found in current working library.
+# Info: VCP2113 Module InstructionMemory found in current working library.
+# Info: VCP2113 Module shiftBy2 found in current working library.
+# Info: VCP2113 Module Adder found in current working library.
+# Pass 2. Processing instantiations.
+# Info: VCP2876 datapath.v : (13, 1): Implicit net declaration, symbol pcsrc has not been declared in module datapath.
+# 

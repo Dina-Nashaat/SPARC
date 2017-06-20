@@ -1,8 +1,8 @@
-timestamp=1497817314962
+timestamp=1497956302152
 
 [$root]
-A/$root=22|""|0|1*156278
-BinI32/$root=3*108977
+A/$root=22|""|0|1*165414
+BinI32/$root=3*110865
 Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
 
 [Adder]
@@ -68,6 +68,13 @@ P/~emb=129,286,437,507
 R=./src/SignExtend.v|21
 Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
 
+[datapath]
+A/datapath=22|./src/datapath.v|1|1*165900
+BinI32/datapath=3*111004
+P/~emb=297,625,846,1067
+R=./src/datapath.v|1
+Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
+
 [mux2]
 A/mux2=22|./src/PCMux.v|22|1*390
 BinI32/mux2=3*139
@@ -82,9 +89,16 @@ P/~emb=194,597,896,1011
 R=./src/queue.v|1
 Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
 
+[shiftBy2]
+A/shiftBy2=22|./src/shiftBy2.v|2|1*159071
+BinI32/shiftBy2=3*109960
+P/~emb=125,283,429,499
+R=./src/shiftBy2.v|2
+Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
+
 [~A]
-LastVerilogToplevel=Reg_file
-ModifyID=1333
+LastVerilogToplevel=datapath
+ModifyID=1413
 Version=73
 c:/My_Designs/SPARC/SPARC/src/Adder.v=0*29951*30316
 c:/My_Designs/SPARC/SPARC/src/IUAdder.v=0*98846*99549
@@ -100,16 +114,18 @@ c:/My_Designs/SPARC/SPARC/src/MUX2.v_Adder.v_InstructionMemory.v_SignExtend.v_IU
 c:/My_Designs/SPARC/SPARC/src/PCMux.v=0*918*1315
 c:/My_Designs/SPARC/SPARC/src/Reg_file.v=0*138293*138773
 c:/My_Designs/SPARC/SPARC/src/SignExtend.v=0*18212*18598
+c:/My_Designs/SPARC/SPARC/src/datapath.v=0*146889*147449
 c:/My_Designs/SPARC/SPARC/src/queue.v=0*27946*28663
 c:/My_Designs/SPARC/SPARC/src/rs_mul.v=0*134996*136531
+c:/My_Designs/SPARC/SPARC/src/shiftBy2.v=0*140135*140503
 
 [~MFT]
-0=278|0SPARC.mgf|138773|33094
-1=225|1SPARC.mgf|156780|128623
-3=225|3SPARC.mgf|109116|85722
+0=298|0SPARC.mgf|147449|34920
+1=239|1SPARC.mgf|165900|134877
+3=239|3SPARC.mgf|111004|86562
 
 [~U]
-$root=12|0*136970|
+$root=12|0*145351|
 Adder=12|0*82130||0x90
 IUAdder=12|0*97098||0x90
 IULogical=12|0*127069||0x90
@@ -119,6 +135,8 @@ MUL_RS=12|0*131461||0x90
 MUX2=12|0*81363||0x90
 Reg_file=12|0*137232||0x90
 SignExtend=12|0*83565||0x90
+datapath=12|0*145629||0x90
 mux2=12|0*150||0x90
 queue_data=12|0*26476||0x90
+shiftBy2=12|0*139476||0x90
 
