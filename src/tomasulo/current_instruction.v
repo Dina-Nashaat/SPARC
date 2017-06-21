@@ -3,7 +3,7 @@ module CUR_INST
   input clk,
 
   input wire in_fetch_next,
-  input wire [4:0] in_operator_type,
+  input wire [5:0] in_operator_type,
   input wire [4:0] in_reg_1,
   input wire [4:0] in_reg_2,
   input wire [4:0] in_reg_3,
@@ -33,7 +33,7 @@ module CUR_INST
   output reg [4:0] out_bank_tag,
 
   output reg out_rs_enable,
-  output reg [4:0] out_operator_type,
+  output reg [5:0] out_operator_type,
   output reg [31:0] out_val_1,
   output reg [31:0] out_val_2,
   output reg [4:0] out_tag_1,
