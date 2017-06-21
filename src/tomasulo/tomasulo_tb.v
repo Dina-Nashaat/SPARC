@@ -4,6 +4,7 @@
 `include "register_status.v"
 `include "rs_mul.v"
 `include "rs_add.v"
+`include "rs_logic.v"
 module test;
 
 reg clk = 0;
@@ -14,9 +15,11 @@ parameter INVALID_TAG = 5'b11111;
 parameter UMUL = 6'b001010;
 parameter ADD = 6'b000000;
 parameter ADDX = 6'b001000;
+parameter SLL = 6'b100101;
+parameter SRL = 6'b100110;
 
 reg out_fetch_next;
-reg [4:0] out_operator_type;
+reg [5:0] out_operator_type;
 reg [4:0] out_reg_1;
 reg [4:0] out_reg_2;
 reg [4:0] out_reg_3;
@@ -30,8 +33,8 @@ RS_MUX rs_mux (
                .in_enable_add(rs_add.out_rs_enable),
                .in_tag_add(rs_add.out_rs_tag),
 
-               .in_enable_logic(1'b0),
-               .in_tag_logic(5'b0),
+               .in_enable_logic(rs_logic.out_rs_enable),
+               .in_tag_logic(rs_logic.out_rs_tag),
 
                .in_enable_mul(rs_mul.out_rs_enable),
                .in_tag_mul(rs_mul.out_rs_tag),
@@ -90,9 +93,9 @@ CDB cdb (
          .in_tag_add(rs_add.out_CDB_tag),
          .in_val_add(rs_add.out_CDB_val),
 
-         .in_request_logic(1'b0),
-         .in_tag_logic(5'b0),
-         .in_val_logic(32'b0),
+         .in_request_logic(rs_logic.out_CDB_broadcast),
+         .in_tag_logic(rs_logic.out_CDB_tag),
+         .in_val_logic(rs_logic.out_CDB_val),
 
          .in_request_mul(rs_mul.out_CDB_broadcast),
          .in_tag_mul(rs_mul.out_CDB_tag),
@@ -104,7 +107,7 @@ CDB cdb (
 
          .in_request_store(1'b0),
          .in_tag_store(5'b0),
-         .in_val_store(32'b00)
+         .in_val_store(32'b0)
          );
 
 MUL_RS rs_mul(
@@ -140,9 +143,24 @@ ADD_RS rs_add(
               .in_CDB_val(cdb.out_val)
               );
 
+LOGIC_RS rs_logic(
+              .clk(clk),
+
+              .in_rs_enable(cur_inst.out_rs_enable),
+              .in_operator_type(cur_inst.out_operator_type),
+              .in_val_1(cur_inst.out_val_1),
+              .in_val_2(cur_inst.out_val_2),
+              .in_tag_1(cur_inst.out_tag_1),
+              .in_tag_2(cur_inst.out_tag_2),
+
+              .in_CDB_broadcast(cdb.out_broadcast),
+              .in_CDB_tag(cdb.out_tag),
+              .in_CDB_val(cdb.out_val)
+              );
+
 initial begin
   out_ICC_flags = 4'b0;
-  #100 $finish;
+  #1000 $finish;
 end
 
 integer i = 0;
@@ -181,6 +199,18 @@ always @(posedge cur_inst.out_fetch_next) begin
         i = i + 1;
         #5;
         out_fetch_next = 1'b1;
+      end else begin
+        if (i == 3) begin
+          // $display("## At cycle %4t\n", $time/5);
+          out_operator_type = SRL;
+          out_reg_1 = 5'h8;
+          out_reg_2 = 5'h0;
+          out_reg_3 = 5'h9;
+          out_fetch_next = 1'b0;
+          i = i + 1;
+          #5;
+          out_fetch_next = 1'b1;
+        end
       end
     end
   end
