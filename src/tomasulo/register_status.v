@@ -35,6 +35,7 @@ initial begin
   registers[1] = {32'h3, INVALID_TAG};
   registers[3] = {32'h6, INVALID_TAG};
   registers[4] = {32'h7, INVALID_TAG};
+  registers[8] = {32'h8, INVALID_TAG};
 end
 
 always @(posedge in_bank_enable) begin
