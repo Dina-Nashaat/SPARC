@@ -1,12 +1,20 @@
-1333
+1729
 ~M 0 "" 0 $root
 ~A 1 "" 0 $root
+~M 3 "./src/tomasulo/rs_add.v" 14 ADD_RS
+~A 1 "./src/tomasulo/rs_add.v" 14 ADD_RS
 ~M 3 "./src/Adder.v" 21 Adder
 ~A 1 "./src/Adder.v" 21 Adder
+~M 1 "./src/tomasulo/cdb.v" 1 CDB
+~A 1 "./src/tomasulo/cdb.v" 1 CDB
+~M 3 "./src/tomasulo/current_instruction.v" 1 CUR_INST
+~A 1 "./src/tomasulo/current_instruction.v" 1 CUR_INST
 ~M 3 "./src/IUAdder.v" 21 IUAdder
 ~A 1 "./src/IUAdder.v" 21 IUAdder
 ~M 3 "./src/IUMultiplier.v" 13 IULogical
 ~A 1 "./src/IUMultiplier.v" 13 IULogical
+~M 3 "./src/IUMultiplier.v" 13 IUMultiplier
+~A 1 "./src/IUMultiplier.v" 13 IUMultiplier
 ~M 3 "./src/IU_Adder.v" 21 IU_Adder
 ~A 1 "./src/IU_Adder.v" 21 IU_Adder
 ~M 3 "./src/InstructionMemory.v" 20 InstructionMemory
@@ -15,11 +23,23 @@
 ~A 1 "./src/rs_mul.v" 11 MUL_RS
 ~M 3 "./src/MUX2.v" 23 MUX2
 ~A 1 "./src/MUX2.v" 23 MUX2
+~M 1 "./src/tomasulo/register_status.v" 1 REG_STATUS
+~A 1 "./src/tomasulo/register_status.v" 1 REG_STATUS
 ~M 3 "./src/Reg_file.v" 1 Reg_file
 ~A 1 "./src/Reg_file.v" 1 Reg_file
 ~M 3 "./src/SignExtend.v" 21 SignExtend
 ~A 1 "./src/SignExtend.v" 21 SignExtend
+~M 3 "./src/cache/cache.v" 2 data_cache
+~A 1 "./src/cache/cache.v" 2 data_cache
+~M 1 "./src/memory/memory.v" 1 data_memory
+~A 1 "./src/memory/memory.v" 1 data_memory
+~M 3 "./src/datapath.v" 1 datapath
+~A 1 "./src/datapath.v" 1 datapath
 ~M 3 "./src/PCMux.v" 22 mux2
 ~A 1 "./src/PCMux.v" 22 mux2
 ~M 3 "./src/queue.v" 1 queue_data
 ~A 1 "./src/queue.v" 1 queue_data
+~M 3 "./src/shiftBy2.v" 2 shiftBy2
+~A 1 "./src/shiftBy2.v" 2 shiftBy2
+~M 3 "./src/tomasulo/register_status_tb.v" 2 test
+~A 1 "./src/tomasulo/register_status_tb.v" 2 test

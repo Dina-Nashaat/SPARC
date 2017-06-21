@@ -1,0 +1,17 @@
+[Files List]
+C:\Aldec\Active-HDL Student Edition\Vlib\std/src/standard.vhd=S
+c:\My_Designs\SPARC_3\SPARC/src/rs_add.v=S
+c:\My_Designs\SPARC_3\SPARC/src/rs_mul.v=S
+c:\My_Designs\SPARC_3\SPARC/src/cdb.v=S
+c:\My_Designs\SPARC_3\SPARC/src/register_status.v=S
+c:\My_Designs\SPARC_3\SPARC/src/current_instruction.v=S
+c:\My_Designs\SPARC_3\SPARC/src/rs_mux.v=S
+c:\My_Designs\SPARC_3\SPARC/src/mux2.v=S
+c:\My_Designs\SPARC_3\SPARC/src/adder.v=S
+c:\My_Designs\SPARC_3\SPARC/src/shiftby2.v=S
+c:\My_Designs\SPARC_3\SPARC/src/reset_flipflop.v=S
+c:\My_Designs\SPARC_3\SPARC/src/tomasulo.v=S
+c:\My_Designs\SPARC_3\SPARC/src/decode_stage.v=S
+c:\My_Designs\SPARC_3\SPARC/src/instr_memory.v=S
+c:\My_Designs\SPARC_3\SPARC/src/fetch_stage.v=S
+c:\My_Designs\SPARC_3\SPARC/src/datapath.v=S

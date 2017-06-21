@@ -1,0 +1,37 @@
+Active-HDL 9.1.2354.4209  2013-06-12 04:30:20
+
+Elaboration top modules:
+Verilog Module                datapath
+
+
+------------------------------------------------------------------------------------------
+Verilog Module          | Library | Info | Compiler Version         | Compilation Options
+------------------------------------------------------------------------------------------
+datapath                | sparc   |      | 9.1.2354.4209  (Windows) | -l SPARC -O2
+fetch_stage             | sparc   |      | 9.1.2354.4209  (Windows) | -l SPARC -O2
+instr_memory            | sparc   |      | 9.1.2354.4209  (Windows) | -l SPARC -O2
+decode_stage            | sparc   |      | 9.1.2354.4209  (Windows) | -l SPARC -O2
+tomasulo                | sparc   |      | 9.1.2354.4209  (Windows) | -l SPARC -O2
+flopr                   | sparc   |      | 9.1.2354.4209  (Windows) | -l SPARC -O2
+Adder                   | sparc   |      | 9.1.2354.4209  (Windows) | -l SPARC -O2
+shiftBy2                | sparc   |      | 9.1.2354.4209  (Windows) | -l SPARC -O2
+MUX2                    | sparc   |      | 9.1.2354.4209  (Windows) | -l SPARC -O2
+RS_MUX                  | sparc   |      | 9.1.2354.4209  (Windows) | -l SPARC -O2
+CUR_INST                | sparc   |      | 9.1.2354.4209  (Windows) | -l SPARC -O2
+REG_STATUS              | sparc   |      | 9.1.2354.4209  (Windows) | -l SPARC -O2
+CDB                     | sparc   |      | 9.1.2354.4209  (Windows) | -l SPARC -O2
+MUL_RS                  | sparc   |      | 9.1.2354.4209  (Windows) | -l SPARC -O2
+ADD_RS                  | sparc   |      | 9.1.2354.4209  (Windows) | -l SPARC -O2
+------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------
+Library                 | Comment
+------------------------------------------------------------------------------------------
+sparc                   | None
+------------------------------------------------------------------------------------------
+
+
+Simulation Options: asim +access +r +m+datapath datapath
+
+
+The performance of simulation is reduced. Version Student Edition

@@ -10,7 +10,7 @@
 //-----------------------------------------------------------------------------
 `timescale 1 ns / 1 ps
 
-module IULogical (
+module IUMultiplier (
 	input [31:0] A, B,	 	  //A -> Multiplier, B->Multiplicand, default:unsigned
 	input [5:0] op,		 
 	output reg [31:0] rd, 	//lsb of product

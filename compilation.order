@@ -4,7 +4,22 @@
 .\src\SignExtend.v
 .\src\IUAdder.v
 .\src\IULogical.v
-.\src\Instruction_Decode.v
-.\src\Reg_file.v
 .\src\IUMultiplier.v
-.\src\rs_mul.v
+.\src\tomasulo\rs_mul.v
+.\src\datapath.v
+.\src\shiftBy2.v
+.\src\cache\cache.v
+.\src\cache\cache_tb.v
+.\src\memory\memory.v
+.\src\memory\memory_tb.v
+.\src\tomasulo\cdb.v
+.\src\tomasulo\cdb_tb.v
+.\src\tomasulo\current_instruction.v
+.\src\tomasulo\register_status.v
+.\src\tomasulo\register_status_tb.v
+.\src\tomasulo\rs_add.v
+.\src\tomasulo\rs_mul_tb.v
+.\src\tomasulo\rs_mux.v
+.\src\tomasulo\tomasulo_tb.v
+.\src\write back\Write_Back.v
+.\src\write back\Write_Back_TB.v

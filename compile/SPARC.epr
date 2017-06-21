@@ -1,1 +1,26 @@
-"./src/Reg_file.v"	1
+"./src/tomasulo/register_status_tb.v"	0
+"./src/shiftBy2.v"	1
+"./src/InstructionMemory.v"	1
+"./src/cache/cache_tb.v"	3
+"./src/SignExtend.v"	1
+"./src/cache/cache.v"	0
+"./src/write back/Write_Back_TB.v"	1
+"./src/tomasulo/rs_mul_tb.v"	0
+"./src/tomasulo/rs_add.v"	0
+"./src/tomasulo/register_status.v"	0
+"./src/tomasulo/cdb.v"	0
+"./src/Adder.v"	1
+"./src/tomasulo/rs_mul.v"	1
+"./src/rs_mul.v"	0
+"./src/datapath.v"	1
+"./src/MUX2.v"	1
+"./src/memory/memory.v"	1
+"./src/write back/Write_Back.v"	1
+"./src/IUMultiplier.v"	1
+"./src/IULogical.v"	1
+"./src/tomasulo/tomasulo_tb.v"	0
+"./src/tomasulo/rs_mux.v"	0
+"./src/memory/memory_tb.v"	0
+"./src/IUAdder.v"	1
+"./src/tomasulo/cdb_tb.v"	0
+"./src/tomasulo/current_instruction.v"	0

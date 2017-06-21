@@ -1,28 +1,519 @@
 MESSAGE "Pass 1. Scanning modules hierarchy."
 MESSAGE_SP VCP2113 "Module \$root found in current working library."
 BEGINPROGRESS Compiling...
+UPDATEPROGRESS 1
+UPDATEPROGRESS 2
+UPDATEPROGRESS 4
+UPDATEPROGRESS 5
+UPDATEPROGRESS 7
+UPDATEPROGRESS 8
+UPDATEPROGRESS 9
+UPDATEPROGRESS 11
+UPDATEPROGRESS 12
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol y has not been declared in module shiftBy2." "c:/My_Designs/SPARC/SPARC/src/shiftBy2.v" 4 1
+UPDATEPROGRESS 14
+UPDATEPROGRESS 15
+ERROR VCP7801 "Duplicated declaration of unit data_cache." "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 2 18
+MESSAGE_SP VCP7802 "data_cache was already declared. See previous declaration." "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 2 18
+ERROR VCP2505 "Duplicate identifier: CACHE_WIDTH" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 2 48
+ERROR VCP2505 "Duplicate identifier: ADDR_WIDTH" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 2 65
+ERROR VCP2545 "Duplicate port identifier: addr" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 4 33
+ERROR VCP2562 "Redeclaration of port addr." "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 4 33
+ERROR VCP2505 "Duplicate identifier: addr" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 4 33
+ERROR VCP2545 "Duplicate port identifier: write_data" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 5 34
+ERROR VCP2562 "Redeclaration of port write_data." "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 5 34
+ERROR VCP2505 "Duplicate identifier: write_data" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 5 34
+ERROR VCP2545 "Duplicate port identifier: memwrite" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 6 14
+ERROR VCP2562 "Redeclaration of port memwrite." "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 6 14
+ERROR VCP2505 "Duplicate identifier: memwrite" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 6 14
+ERROR VCP2545 "Duplicate port identifier: clk" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 7 14
+ERROR VCP2562 "Redeclaration of port clk." "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 7 14
+ERROR VCP2505 "Duplicate identifier: clk" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 7 14
+ERROR VCP2545 "Duplicate port identifier: enable" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 10 14
+ERROR VCP2562 "Redeclaration of port enable." "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 10 14
+ERROR VCP2505 "Duplicate identifier: enable" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 10 14
+ERROR VCP2545 "Duplicate port identifier: read_data" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 11 34
+ERROR VCP2562 "Redeclaration of port read_data." "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 11 34
+ERROR VCP2505 "Duplicate identifier: read_data" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 11 34
+ERROR VCP2545 "Duplicate port identifier: write_finished" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 13 14
+ERROR VCP2562 "Redeclaration of port write_finished." "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 13 14
+ERROR VCP2505 "Duplicate identifier: write_finished" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 13 14
+ERROR VCP2545 "Duplicate port identifier: read_finished" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 14 14
+ERROR VCP2562 "Redeclaration of port read_finished." "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 14 14
+ERROR VCP2505 "Duplicate identifier: read_finished" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 14 14
+ERROR VCP2505 "Duplicate identifier: CACHE_SIZE" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 17 32
+ERROR VCP2505 "Duplicate identifier: BLOCKS_IN_SET" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 18 30
+ERROR VCP2505 "Duplicate identifier: BLOCK_SIZE" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 19 26
+ERROR VCP2505 "Duplicate identifier: SET_COUNT" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 20 50
+ERROR VCP2505 "Duplicate identifier: TAG_SIZE" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 21 66
+ERROR VCP2505 "Duplicate identifier: CACHE" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 23 49
+ERROR VCP2505 "Duplicate identifier: TAGS" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 24 48
+ERROR VCP2505 "Duplicate identifier: addr_wire" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 26 32
+ERROR VCP2505 "Duplicate identifier: write_data_wire" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 27 44
+ERROR VCP2505 "Duplicate identifier: memwrite_wire" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 28 31
+ERROR VCP2505 "Duplicate identifier: read_data_wire" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 29 30
+ERROR VCP2505 "Duplicate identifier: random" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 31 19
+ERROR VCP2505 "Duplicate identifier: flag" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 32 10
+ERROR VCP2505 "Duplicate identifier: tag_reg" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 33 30
+ERROR VCP2505 "Duplicate identifier: cur_set_num" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 34 59
+ERROR VCP2505 "Duplicate identifier: rand_block_num" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 34 59
+ERROR VCP2505 "Duplicate identifier: loop_set_num" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 34 59
+ERROR VCP2505 "Duplicate identifier: loop_i" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 34 59
+ERROR VCP2505 "Duplicate identifier: MEMO" "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 41 83
+WARNING VCP2557 "Identifier ""addr"" is used on the ANSI style port list and cannot be redeclared in the module name space." "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 4 1
+WARNING VCP2557 "Identifier ""write_data"" is used on the ANSI style port list and cannot be redeclared in the module name space." "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 5 1
+WARNING VCP2557 "Identifier ""read_data"" is used on the ANSI style port list and cannot be redeclared in the module name space." "c:/My_Designs/SPARC/SPARC/src/cache/cache.v" 11 1
+UPDATEPROGRESS 16
+UPDATEPROGRESS 18
+ERROR VCP7801 "Duplicated declaration of unit test." "c:/My_Designs/SPARC/SPARC/src/memory/memory_tb.v" 1 12
+MESSAGE_SP VCP7802 "test was already declared. See previous declaration." "c:/My_Designs/SPARC/SPARC/src/cache/cache_tb.v" 2 12
+ERROR VCP2505 "Duplicate identifier: clk" "c:/My_Designs/SPARC/SPARC/src/memory/memory_tb.v" 3 15
+ERROR VCP2505 "Duplicate identifier: addr_reg" "c:/My_Designs/SPARC/SPARC/src/memory/memory_tb.v" 6 32
+ERROR VCP2505 "Duplicate identifier: addr_wire" "c:/My_Designs/SPARC/SPARC/src/memory/memory_tb.v" 7 36
+ERROR VCP2505 "Duplicate identifier: write_data_reg" "c:/My_Designs/SPARC/SPARC/src/memory/memory_tb.v" 8 38
+ERROR VCP2505 "Duplicate identifier: write_data_wire" "c:/My_Designs/SPARC/SPARC/src/memory/memory_tb.v" 9 48
+ERROR VCP2505 "Duplicate identifier: read_data_wire" "c:/My_Designs/SPARC/SPARC/src/memory/memory_tb.v" 10 30
+ERROR VCP2505 "Duplicate identifier: memwrite_reg" "c:/My_Designs/SPARC/SPARC/src/memory/memory_tb.v" 11 27
+ERROR VCP2505 "Duplicate identifier: memwrite_wire" "c:/My_Designs/SPARC/SPARC/src/memory/memory_tb.v" 12 37
+UPDATEPROGRESS 19
+UPDATEPROGRESS 21
+ERROR VCP7801 "Duplicated declaration of unit test." "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb_tb.v" 2 12
+MESSAGE_SP VCP7802 "test was already declared. See previous declaration." "c:/My_Designs/SPARC/SPARC/src/cache/cache_tb.v" 2 12
+ERROR VCP2505 "Duplicate identifier: clk" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb_tb.v" 4 13
+UPDATEPROGRESS 22
+UPDATEPROGRESS 23
+UPDATEPROGRESS 25
+ERROR VCP7801 "Duplicated declaration of unit test." "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status_tb.v" 2 12
+MESSAGE_SP VCP7802 "test was already declared. See previous declaration." "c:/My_Designs/SPARC/SPARC/src/cache/cache_tb.v" 2 12
+ERROR VCP2505 "Duplicate identifier: clk" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status_tb.v" 4 13
+UPDATEPROGRESS 26
+UPDATEPROGRESS 28
+ERROR VCP7801 "Duplicated declaration of unit MUL_RS." "rs_mul.v" 11 14
+MESSAGE_SP VCP7802 "MUL_RS was already declared. See previous declaration." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mul.v" 14 14
+ERROR VCP2545 "Duplicate port identifier: in_operator_type" "rs_mul.v" 13 19
+ERROR VCP2562 "Redeclaration of port in_operator_type." "rs_mul.v" 13 19
+ERROR VCP2505 "Duplicate identifier: in_operator_type" "rs_mul.v" 13 19
+ERROR VCP2545 "Duplicate port identifier: in_CDB_tag" "rs_mul.v" 20 19
+ERROR VCP2562 "Redeclaration of port in_CDB_tag." "rs_mul.v" 20 19
+ERROR VCP2505 "Duplicate identifier: in_CDB_tag" "rs_mul.v" 20 19
+ERROR VCP2505 "Duplicate identifier: UMUL" "rs_mul.v" 31 28
+ERROR VCP2505 "Duplicate identifier: SMUL" "rs_mul.v" 32 28
+ERROR VCP2505 "Duplicate identifier: UMUL_CC" "rs_mul.v" 33 31
+ERROR VCP2505 "Duplicate identifier: SMUL_CC" "rs_mul.v" 34 31
+ERROR VCP2505 "Duplicate identifier: icc_n" "rs_mul.v" 38 32
+ERROR VCP2505 "Duplicate identifier: icc_z" "rs_mul.v" 38 32
+ERROR VCP2505 "Duplicate identifier: icc_c" "rs_mul.v" 38 32
+ERROR VCP2505 "Duplicate identifier: icc_v" "rs_mul.v" 38 32
+ERROR VCP2505 "Duplicate identifier: signed_a" "rs_mul.v" 40 28
+ERROR VCP2505 "Duplicate identifier: signed_b" "rs_mul.v" 41 28
+ERROR VCP2505 "Duplicate identifier: result" "rs_mul.v" 42 26
+ERROR VCP2505 "Duplicate identifier: rs" "rs_mul.v" 45 19
+WARNING VCP2558 "Size changed at redeclaration of port: in_operator_type." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mul.v" 18 1
+WARNING VCP2557 "Identifier ""in_operator_type"" is used on the ANSI style port list and cannot be redeclared in the module name space." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mul.v" 18 1
+WARNING VCP2558 "Size changed at redeclaration of port: in_operator_type." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mul.v" 18 1
+WARNING VCP2558 "Size changed at redeclaration of port: in_CDB_tag." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mul.v" 25 1
+WARNING VCP2557 "Identifier ""in_CDB_tag"" is used on the ANSI style port list and cannot be redeclared in the module name space." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mul.v" 25 1
+WARNING VCP2558 "Size changed at redeclaration of port: in_CDB_tag." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mul.v" 25 1
+ERROR VCP7801 "Duplicated declaration of unit test." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mul_tb.v" 2 12
+MESSAGE_SP VCP7802 "test was already declared. See previous declaration." "c:/My_Designs/SPARC/SPARC/src/cache/cache_tb.v" 2 12
+ERROR VCP2505 "Duplicate identifier: clk" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mul_tb.v" 4 13
+ERROR VCP2505 "Duplicate identifier: in_CDB_broadcast" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mul_tb.v" 16 22
+ERROR VCP2505 "Duplicate identifier: in_CDB_tag" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mul_tb.v" 17 22
+ERROR VCP2505 "Duplicate identifier: in_CDB_val" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mul_tb.v" 18 23
+UPDATEPROGRESS 29
+UPDATEPROGRESS 30
+ERROR VCP7801 "Duplicated declaration of unit RS_MUX." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 1 14
+MESSAGE_SP VCP7802 "RS_MUX was already declared. See previous declaration." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 1 14
+ERROR VCP2545 "Duplicate port identifier: clk" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 3 14
+ERROR VCP2562 "Redeclaration of port clk." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 3 14
+ERROR VCP2505 "Duplicate identifier: clk" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 3 14
+ERROR VCP2545 "Duplicate port identifier: in_enable_add" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 5 14
+ERROR VCP2562 "Redeclaration of port in_enable_add." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 5 14
+ERROR VCP2505 "Duplicate identifier: in_enable_add" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 5 14
+ERROR VCP2545 "Duplicate port identifier: in_tag_add" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 6 20
+ERROR VCP2562 "Redeclaration of port in_tag_add." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 6 20
+ERROR VCP2505 "Duplicate identifier: in_tag_add" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 6 20
+ERROR VCP2545 "Duplicate port identifier: in_enable_logic" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 8 14
+ERROR VCP2562 "Redeclaration of port in_enable_logic." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 8 14
+ERROR VCP2505 "Duplicate identifier: in_enable_logic" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 8 14
+ERROR VCP2545 "Duplicate port identifier: in_tag_logic" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 9 20
+ERROR VCP2562 "Redeclaration of port in_tag_logic." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 9 20
+ERROR VCP2505 "Duplicate identifier: in_tag_logic" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 9 20
+ERROR VCP2545 "Duplicate port identifier: in_enable_mul" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 11 14
+ERROR VCP2562 "Redeclaration of port in_enable_mul." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 11 14
+ERROR VCP2505 "Duplicate identifier: in_enable_mul" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 11 14
+ERROR VCP2545 "Duplicate port identifier: in_tag_mul" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 12 20
+ERROR VCP2562 "Redeclaration of port in_tag_mul." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 12 20
+ERROR VCP2505 "Duplicate identifier: in_tag_mul" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 12 20
+ERROR VCP2545 "Duplicate port identifier: in_enable_load" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 14 14
+ERROR VCP2562 "Redeclaration of port in_enable_load." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 14 14
+ERROR VCP2505 "Duplicate identifier: in_enable_load" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 14 14
+ERROR VCP2545 "Duplicate port identifier: in_tag_load" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 15 20
+ERROR VCP2562 "Redeclaration of port in_tag_load." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 15 20
+ERROR VCP2505 "Duplicate identifier: in_tag_load" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 15 20
+ERROR VCP2545 "Duplicate port identifier: in_enable_store" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 17 14
+ERROR VCP2562 "Redeclaration of port in_enable_store." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 17 14
+ERROR VCP2505 "Duplicate identifier: in_enable_store" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 17 14
+ERROR VCP2545 "Duplicate port identifier: in_tag_store" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 18 20
+ERROR VCP2562 "Redeclaration of port in_tag_store." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 18 20
+ERROR VCP2505 "Duplicate identifier: in_tag_store" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 18 20
+ERROR VCP2545 "Duplicate port identifier: out_enable" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 20 14
+ERROR VCP2562 "Redeclaration of port out_enable." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 20 14
+ERROR VCP2505 "Duplicate identifier: out_enable" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 20 14
+ERROR VCP2545 "Duplicate port identifier: out_tag" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 21 20
+ERROR VCP2562 "Redeclaration of port out_tag." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 21 20
+ERROR VCP2505 "Duplicate identifier: out_tag" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_mux.v" 21 20
+ERROR VCP2505 "Duplicate identifier: CDB" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 1 11
+ERROR VCP2545 "Duplicate port identifier: clk" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 3 14
+ERROR VCP2562 "Redeclaration of port clk." "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 3 14
+ERROR VCP2505 "Duplicate identifier: clk" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 3 14
+ERROR VCP2545 "Duplicate port identifier: in_request_add" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 5 14
+ERROR VCP2562 "Redeclaration of port in_request_add." "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 5 14
+ERROR VCP2505 "Duplicate identifier: in_request_add" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 5 14
+ERROR VCP2545 "Duplicate port identifier: in_tag_add" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 6 20
+ERROR VCP2562 "Redeclaration of port in_tag_add." "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 6 20
+ERROR VCP2505 "Duplicate identifier: in_tag_add" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 6 20
+ERROR VCP2545 "Duplicate port identifier: in_val_add" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 7 21
+ERROR VCP2562 "Redeclaration of port in_val_add." "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 7 21
+ERROR VCP2505 "Duplicate identifier: in_val_add" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 7 21
+ERROR VCP2545 "Duplicate port identifier: in_request_logic" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 9 14
+ERROR VCP2562 "Redeclaration of port in_request_logic." "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 9 14
+ERROR VCP2505 "Duplicate identifier: in_request_logic" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 9 14
+ERROR VCP2545 "Duplicate port identifier: in_tag_logic" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 10 20
+ERROR VCP2562 "Redeclaration of port in_tag_logic." "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 10 20
+ERROR VCP2505 "Duplicate identifier: in_tag_logic" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 10 20
+ERROR VCP2545 "Duplicate port identifier: in_val_logic" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 11 21
+ERROR VCP2562 "Redeclaration of port in_val_logic." "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 11 21
+ERROR VCP2505 "Duplicate identifier: in_val_logic" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 11 21
+ERROR VCP2545 "Duplicate port identifier: in_request_mul" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 13 14
+ERROR VCP2562 "Redeclaration of port in_request_mul." "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 13 14
+ERROR VCP2505 "Duplicate identifier: in_request_mul" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 13 14
+ERROR VCP2545 "Duplicate port identifier: in_tag_mul" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 14 20
+ERROR VCP2562 "Redeclaration of port in_tag_mul." "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 14 20
+ERROR VCP2505 "Duplicate identifier: in_tag_mul" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 14 20
+ERROR VCP2545 "Duplicate port identifier: in_val_mul" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 15 21
+ERROR VCP2562 "Redeclaration of port in_val_mul." "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 15 21
+ERROR VCP2505 "Duplicate identifier: in_val_mul" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 15 21
+ERROR VCP2545 "Duplicate port identifier: in_request_load" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 17 14
+ERROR VCP2562 "Redeclaration of port in_request_load." "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 17 14
+ERROR VCP2505 "Duplicate identifier: in_request_load" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 17 14
+ERROR VCP2545 "Duplicate port identifier: in_tag_load" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 18 20
+ERROR VCP2562 "Redeclaration of port in_tag_load." "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 18 20
+ERROR VCP2505 "Duplicate identifier: in_tag_load" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 18 20
+ERROR VCP2545 "Duplicate port identifier: in_val_load" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 19 21
+ERROR VCP2562 "Redeclaration of port in_val_load." "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 19 21
+ERROR VCP2505 "Duplicate identifier: in_val_load" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 19 21
+ERROR VCP2545 "Duplicate port identifier: in_request_store" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 21 14
+ERROR VCP2562 "Redeclaration of port in_request_store." "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 21 14
+ERROR VCP2505 "Duplicate identifier: in_request_store" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 21 14
+ERROR VCP2545 "Duplicate port identifier: in_tag_store" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 22 20
+ERROR VCP2562 "Redeclaration of port in_tag_store." "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 22 20
+ERROR VCP2505 "Duplicate identifier: in_tag_store" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 22 20
+ERROR VCP2545 "Duplicate port identifier: in_val_store" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 23 21
+ERROR VCP2562 "Redeclaration of port in_val_store." "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 23 21
+ERROR VCP2505 "Duplicate identifier: in_val_store" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 23 21
+ERROR VCP2545 "Duplicate port identifier: out_broadcast" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 25 14
+ERROR VCP2562 "Redeclaration of port out_broadcast." "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 25 14
+ERROR VCP2505 "Duplicate identifier: out_broadcast" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 25 14
+ERROR VCP2545 "Duplicate port identifier: out_tag" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 26 20
+ERROR VCP2562 "Redeclaration of port out_tag." "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 26 20
+ERROR VCP2505 "Duplicate identifier: out_tag" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 26 20
+ERROR VCP2545 "Duplicate port identifier: out_val" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 27 21
+ERROR VCP2562 "Redeclaration of port out_val." "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 27 21
+ERROR VCP2505 "Duplicate identifier: out_val" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 27 21
+ERROR VCP2505 "Duplicate identifier: INVALID_TAG" "c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v" 30 34
+ERROR VCP7801 "Duplicated declaration of unit CUR_INST." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 1 16
+MESSAGE_SP VCP7802 "CUR_INST was already declared. See previous declaration." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 1 16
+ERROR VCP2545 "Duplicate port identifier: clk" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 3 9
+ERROR VCP2562 "Redeclaration of port clk." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 3 9
+ERROR VCP2545 "Duplicate port identifier: in_fetch_next" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 5 14
+ERROR VCP2562 "Redeclaration of port in_fetch_next." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 5 14
+ERROR VCP2505 "Duplicate identifier: in_fetch_next" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 5 14
+ERROR VCP2545 "Duplicate port identifier: in_operator_type" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 6 20
+ERROR VCP2562 "Redeclaration of port in_operator_type." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 6 20
+ERROR VCP2505 "Duplicate identifier: in_operator_type" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 6 20
+ERROR VCP2545 "Duplicate port identifier: in_reg_1" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 7 20
+ERROR VCP2562 "Redeclaration of port in_reg_1." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 7 20
+ERROR VCP2505 "Duplicate identifier: in_reg_1" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 7 20
+ERROR VCP2545 "Duplicate port identifier: in_reg_2" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 8 20
+ERROR VCP2562 "Redeclaration of port in_reg_2." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 8 20
+ERROR VCP2505 "Duplicate identifier: in_reg_2" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 8 20
+ERROR VCP2545 "Duplicate port identifier: in_reg_3" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 9 20
+ERROR VCP2562 "Redeclaration of port in_reg_3." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 9 20
+ERROR VCP2505 "Duplicate identifier: in_reg_3" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 9 20
+ERROR VCP2545 "Duplicate port identifier: in_enable" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 11 14
+ERROR VCP2562 "Redeclaration of port in_enable." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 11 14
+ERROR VCP2505 "Duplicate identifier: in_enable" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 11 14
+ERROR VCP2545 "Duplicate port identifier: in_val_1" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 12 21
+ERROR VCP2562 "Redeclaration of port in_val_1." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 12 21
+ERROR VCP2505 "Duplicate identifier: in_val_1" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 12 21
+ERROR VCP2545 "Duplicate port identifier: in_val_2" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 13 21
+ERROR VCP2562 "Redeclaration of port in_val_2." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 13 21
+ERROR VCP2505 "Duplicate identifier: in_val_2" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 13 21
+ERROR VCP2545 "Duplicate port identifier: in_tag_1" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 14 20
+ERROR VCP2562 "Redeclaration of port in_tag_1." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 14 20
+ERROR VCP2505 "Duplicate identifier: in_tag_1" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 14 20
+ERROR VCP2545 "Duplicate port identifier: in_tag_2" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 15 20
+ERROR VCP2562 "Redeclaration of port in_tag_2." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 15 20
+ERROR VCP2505 "Duplicate identifier: in_tag_2" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 15 20
+ERROR VCP2545 "Duplicate port identifier: in_CDB_broadcast" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 17 14
+ERROR VCP2562 "Redeclaration of port in_CDB_broadcast." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 17 14
+ERROR VCP2505 "Duplicate identifier: in_CDB_broadcast" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 17 14
+ERROR VCP2545 "Duplicate port identifier: in_CDB_tag" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 18 20
+ERROR VCP2562 "Redeclaration of port in_CDB_tag." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 18 20
+ERROR VCP2505 "Duplicate identifier: in_CDB_tag" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 18 20
+ERROR VCP2545 "Duplicate port identifier: in_CDB_val" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 19 21
+ERROR VCP2562 "Redeclaration of port in_CDB_val." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 19 21
+ERROR VCP2505 "Duplicate identifier: in_CDB_val" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 19 21
+ERROR VCP2545 "Duplicate port identifier: in_rs_enable" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 21 14
+ERROR VCP2562 "Redeclaration of port in_rs_enable." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 21 14
+ERROR VCP2505 "Duplicate identifier: in_rs_enable" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 21 14
+ERROR VCP2545 "Duplicate port identifier: in_rs_tag" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 22 20
+ERROR VCP2562 "Redeclaration of port in_rs_tag." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 22 20
+ERROR VCP2505 "Duplicate identifier: in_rs_tag" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 22 20
+ERROR VCP2545 "Duplicate port identifier: out_fetch_next" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 24 14
+ERROR VCP2562 "Redeclaration of port out_fetch_next." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 24 14
+ERROR VCP2505 "Duplicate identifier: out_fetch_next" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 24 14
+ERROR VCP2545 "Duplicate port identifier: out_enable" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 26 14
+ERROR VCP2562 "Redeclaration of port out_enable." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 26 14
+ERROR VCP2505 "Duplicate identifier: out_enable" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 26 14
+ERROR VCP2545 "Duplicate port identifier: out_reg_1" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 27 20
+ERROR VCP2562 "Redeclaration of port out_reg_1." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 27 20
+ERROR VCP2505 "Duplicate identifier: out_reg_1" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 27 20
+ERROR VCP2545 "Duplicate port identifier: out_reg_2" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 28 20
+ERROR VCP2562 "Redeclaration of port out_reg_2." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 28 20
+ERROR VCP2505 "Duplicate identifier: out_reg_2" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 28 20
+ERROR VCP2545 "Duplicate port identifier: out_bank_enable" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 30 14
+ERROR VCP2562 "Redeclaration of port out_bank_enable." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 30 14
+ERROR VCP2505 "Duplicate identifier: out_bank_enable" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 30 14
+ERROR VCP2545 "Duplicate port identifier: out_bank_reg" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 31 20
+ERROR VCP2562 "Redeclaration of port out_bank_reg." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 31 20
+ERROR VCP2505 "Duplicate identifier: out_bank_reg" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 31 20
+ERROR VCP2545 "Duplicate port identifier: out_bank_tag" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 32 20
+ERROR VCP2562 "Redeclaration of port out_bank_tag." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 32 20
+ERROR VCP2505 "Duplicate identifier: out_bank_tag" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 32 20
+ERROR VCP2545 "Duplicate port identifier: out_rs_enable" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 34 14
+ERROR VCP2562 "Redeclaration of port out_rs_enable." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 34 14
+ERROR VCP2505 "Duplicate identifier: out_rs_enable" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 34 14
+ERROR VCP2545 "Duplicate port identifier: out_operator_type" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 35 20
+ERROR VCP2562 "Redeclaration of port out_operator_type." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 35 20
+ERROR VCP2505 "Duplicate identifier: out_operator_type" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 35 20
+ERROR VCP2545 "Duplicate port identifier: out_val_1" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 36 21
+ERROR VCP2562 "Redeclaration of port out_val_1." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 36 21
+ERROR VCP2505 "Duplicate identifier: out_val_1" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 36 21
+ERROR VCP2545 "Duplicate port identifier: out_val_2" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 37 21
+ERROR VCP2562 "Redeclaration of port out_val_2." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 37 21
+ERROR VCP2505 "Duplicate identifier: out_val_2" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 37 21
+ERROR VCP2545 "Duplicate port identifier: out_tag_1" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 38 20
+ERROR VCP2562 "Redeclaration of port out_tag_1." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 38 20
+ERROR VCP2505 "Duplicate identifier: out_tag_1" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 38 20
+ERROR VCP2545 "Duplicate port identifier: out_tag_2" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 39 20
+ERROR VCP2562 "Redeclaration of port out_tag_2." "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 39 20
+ERROR VCP2505 "Duplicate identifier: out_tag_2" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 39 20
+ERROR VCP2505 "Duplicate identifier: INVALID_TAG" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 42 34
+ERROR VCP2505 "Duplicate identifier: out_val_1_reg" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 44 26
+ERROR VCP2505 "Duplicate identifier: out_val_2_reg" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 45 26
+ERROR VCP2505 "Duplicate identifier: out_tag_1_reg" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 46 25
+ERROR VCP2505 "Duplicate identifier: out_tag_2_reg" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 47 25
+ERROR VCP2505 "Duplicate identifier: j" "c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v" 84 15
+ERROR VCP2505 "Duplicate identifier: REG_STATUS" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 1 18
+ERROR VCP2545 "Duplicate port identifier: clk" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 3 9
+ERROR VCP2562 "Redeclaration of port clk." "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 3 9
+ERROR VCP2545 "Duplicate port identifier: in_enable" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 5 14
+ERROR VCP2562 "Redeclaration of port in_enable." "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 5 14
+ERROR VCP2505 "Duplicate identifier: in_enable" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 5 14
+ERROR VCP2545 "Duplicate port identifier: in_reg_1" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 6 20
+ERROR VCP2562 "Redeclaration of port in_reg_1." "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 6 20
+ERROR VCP2505 "Duplicate identifier: in_reg_1" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 6 20
+ERROR VCP2545 "Duplicate port identifier: in_reg_2" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 7 20
+ERROR VCP2562 "Redeclaration of port in_reg_2." "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 7 20
+ERROR VCP2505 "Duplicate identifier: in_reg_2" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 7 20
+ERROR VCP2545 "Duplicate port identifier: in_bank_enable" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 9 14
+ERROR VCP2562 "Redeclaration of port in_bank_enable." "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 9 14
+ERROR VCP2505 "Duplicate identifier: in_bank_enable" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 9 14
+ERROR VCP2545 "Duplicate port identifier: in_bank_reg" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 10 20
+ERROR VCP2562 "Redeclaration of port in_bank_reg." "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 10 20
+ERROR VCP2505 "Duplicate identifier: in_bank_reg" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 10 20
+ERROR VCP2545 "Duplicate port identifier: in_bank_tag" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 11 20
+ERROR VCP2562 "Redeclaration of port in_bank_tag." "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 11 20
+ERROR VCP2505 "Duplicate identifier: in_bank_tag" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 11 20
+ERROR VCP2545 "Duplicate port identifier: in_CDB_broadcast" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 13 14
+ERROR VCP2562 "Redeclaration of port in_CDB_broadcast." "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 13 14
+ERROR VCP2505 "Duplicate identifier: in_CDB_broadcast" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 13 14
+ERROR VCP2545 "Duplicate port identifier: in_CDB_tag" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 14 20
+ERROR VCP2562 "Redeclaration of port in_CDB_tag." "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 14 20
+ERROR VCP2505 "Duplicate identifier: in_CDB_tag" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 14 20
+ERROR VCP2545 "Duplicate port identifier: in_CDB_val" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 15 21
+ERROR VCP2562 "Redeclaration of port in_CDB_val." "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 15 21
+ERROR VCP2505 "Duplicate identifier: in_CDB_val" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 15 21
+ERROR VCP2545 "Duplicate port identifier: out_enable" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 17 14
+ERROR VCP2562 "Redeclaration of port out_enable." "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 17 14
+ERROR VCP2505 "Duplicate identifier: out_enable" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 17 14
+ERROR VCP2545 "Duplicate port identifier: out_val_1" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 18 21
+ERROR VCP2562 "Redeclaration of port out_val_1." "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 18 21
+ERROR VCP2505 "Duplicate identifier: out_val_1" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 18 21
+ERROR VCP2545 "Duplicate port identifier: out_val_2" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 19 21
+ERROR VCP2562 "Redeclaration of port out_val_2." "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 19 21
+ERROR VCP2505 "Duplicate identifier: out_val_2" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 19 21
+ERROR VCP2545 "Duplicate port identifier: out_tag_1" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 20 20
+ERROR VCP2562 "Redeclaration of port out_tag_1." "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 20 20
+ERROR VCP2505 "Duplicate identifier: out_tag_1" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 20 20
+ERROR VCP2545 "Duplicate port identifier: out_tag_2" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 21 20
+ERROR VCP2562 "Redeclaration of port out_tag_2." "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 21 20
+ERROR VCP2505 "Duplicate identifier: out_tag_2" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 21 20
+ERROR VCP2505 "Duplicate identifier: INVALID_TAG" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 24 34
+ERROR VCP2505 "Duplicate identifier: registers" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 26 27
+ERROR VCP2505 "Duplicate identifier: i_0" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 28 13
+ERROR VCP2505 "Duplicate identifier: i_1" "c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v" 45 13
+ERROR VCP2505 "Duplicate identifier: MUL_RS" "rs_mul.v" 11 14
+ERROR VCP2545 "Duplicate port identifier: in_clock" "rs_mul.v" 12 14
+ERROR VCP2562 "Redeclaration of port in_clock." "rs_mul.v" 12 14
+ERROR VCP2505 "Duplicate identifier: in_clock" "rs_mul.v" 12 14
+ERROR VCP2545 "Duplicate port identifier: in_operator_type" "rs_mul.v" 13 19
+ERROR VCP2562 "Redeclaration of port in_operator_type." "rs_mul.v" 13 19
+ERROR VCP2505 "Duplicate identifier: in_operator_type" "rs_mul.v" 13 19
+ERROR VCP2545 "Duplicate port identifier: in_data1" "rs_mul.v" 14 20
+ERROR VCP2562 "Redeclaration of port in_data1." "rs_mul.v" 14 20
+ERROR VCP2505 "Duplicate identifier: in_data1" "rs_mul.v" 14 20
+ERROR VCP2545 "Duplicate port identifier: in_data2" "rs_mul.v" 15 20
+ERROR VCP2562 "Redeclaration of port in_data2." "rs_mul.v" 15 20
+ERROR VCP2505 "Duplicate identifier: in_data2" "rs_mul.v" 15 20
+ERROR VCP2545 "Duplicate port identifier: in_tag1" "rs_mul.v" 16 19
+ERROR VCP2562 "Redeclaration of port in_tag1." "rs_mul.v" 16 19
+ERROR VCP2505 "Duplicate identifier: in_tag1" "rs_mul.v" 16 19
+ERROR VCP2545 "Duplicate port identifier: in_tag2" "rs_mul.v" 17 19
+ERROR VCP2562 "Redeclaration of port in_tag2." "rs_mul.v" 17 19
+ERROR VCP2505 "Duplicate identifier: in_tag2" "rs_mul.v" 17 19
+ERROR VCP2545 "Duplicate port identifier: in_CDB_is_cast" "rs_mul.v" 19 14
+ERROR VCP2562 "Redeclaration of port in_CDB_is_cast." "rs_mul.v" 19 14
+ERROR VCP2505 "Duplicate identifier: in_CDB_is_cast" "rs_mul.v" 19 14
+ERROR VCP2545 "Duplicate port identifier: in_CDB_tag" "rs_mul.v" 20 19
+ERROR VCP2562 "Redeclaration of port in_CDB_tag." "rs_mul.v" 20 19
+ERROR VCP2505 "Duplicate identifier: in_CDB_tag" "rs_mul.v" 20 19
+ERROR VCP2545 "Duplicate port identifier: in_CDB_data" "rs_mul.v" 21 20
+ERROR VCP2562 "Redeclaration of port in_CDB_data." "rs_mul.v" 21 20
+ERROR VCP2505 "Duplicate identifier: in_CDB_data" "rs_mul.v" 21 20
+ERROR VCP2545 "Duplicate port identifier: in_unit_enable" "rs_mul.v" 23 14
+ERROR VCP2562 "Redeclaration of port in_unit_enable." "rs_mul.v" 23 14
+ERROR VCP2505 "Duplicate identifier: in_unit_enable" "rs_mul.v" 23 14
+ERROR VCP2545 "Duplicate port identifier: out_tag" "rs_mul.v" 25 19
+ERROR VCP2562 "Redeclaration of port out_tag." "rs_mul.v" 25 19
+ERROR VCP2505 "Duplicate identifier: out_tag" "rs_mul.v" 25 19
+ERROR VCP2545 "Duplicate port identifier: out_data" "rs_mul.v" 26 20
+ERROR VCP2562 "Redeclaration of port out_data." "rs_mul.v" 26 20
+ERROR VCP2505 "Duplicate identifier: out_data" "rs_mul.v" 26 20
+ERROR VCP2545 "Duplicate port identifier: out_broadcast" "rs_mul.v" 27 14
+ERROR VCP2562 "Redeclaration of port out_broadcast." "rs_mul.v" 27 14
+ERROR VCP2505 "Duplicate identifier: out_broadcast" "rs_mul.v" 27 14
+ERROR VCP2545 "Duplicate port identifier: out_available" "rs_mul.v" 28 14
+ERROR VCP2562 "Redeclaration of port out_available." "rs_mul.v" 28 14
+ERROR VCP2505 "Duplicate identifier: out_available" "rs_mul.v" 28 14
+ERROR VCP2505 "Duplicate identifier: UMUL" "rs_mul.v" 31 28
+ERROR VCP2505 "Duplicate identifier: SMUL" "rs_mul.v" 32 28
+ERROR VCP2505 "Duplicate identifier: UMUL_CC" "rs_mul.v" 33 31
+ERROR VCP2505 "Duplicate identifier: SMUL_CC" "rs_mul.v" 34 31
+ERROR VCP2505 "Duplicate identifier: INVALID_NUM" "rs_mul.v" 36 35
+ERROR VCP2505 "Duplicate identifier: icc_n" "rs_mul.v" 38 32
+ERROR VCP2505 "Duplicate identifier: icc_z" "rs_mul.v" 38 32
+ERROR VCP2505 "Duplicate identifier: icc_c" "rs_mul.v" 38 32
+ERROR VCP2505 "Duplicate identifier: icc_v" "rs_mul.v" 38 32
+ERROR VCP2505 "Duplicate identifier: signed_a" "rs_mul.v" 40 28
+ERROR VCP2505 "Duplicate identifier: signed_b" "rs_mul.v" 41 28
+ERROR VCP2505 "Duplicate identifier: result" "rs_mul.v" 42 26
+ERROR VCP2505 "Duplicate identifier: remain_result" "rs_mul.v" 43 33
+ERROR VCP2505 "Duplicate identifier: rs" "rs_mul.v" 45 19
+ERROR VCP2505 "Duplicate identifier: i" "rs_mul.v" 46 11
+ERROR VCP2505 "Duplicate identifier: breakmark" "rs_mul.v" 48 15
+ERROR VCP2505 "Duplicate identifier: data1_tmp" "rs_mul.v" 121 21
+ERROR VCP2505 "Duplicate identifier: tag1_tmp" "rs_mul.v" 122 19
+ERROR VCP2505 "Duplicate identifier: data2_tmp" "rs_mul.v" 123 21
+ERROR VCP2505 "Duplicate identifier: tag2_tmp" "rs_mul.v" 124 19
+ERROR VCP7801 "Duplicated declaration of unit ADD_RS." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 14 14
+MESSAGE_SP VCP7802 "ADD_RS was already declared. See previous declaration." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 14 14
+ERROR VCP2545 "Duplicate port identifier: clk" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 15 14
+ERROR VCP2562 "Redeclaration of port clk." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 15 14
+ERROR VCP2505 "Duplicate identifier: clk" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 15 14
+ERROR VCP2545 "Duplicate port identifier: in_rs_enable" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 17 14
+ERROR VCP2562 "Redeclaration of port in_rs_enable." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 17 14
+ERROR VCP2505 "Duplicate identifier: in_rs_enable" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 17 14
+ERROR VCP2545 "Duplicate port identifier: in_operator_type" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 18 20
+ERROR VCP2562 "Redeclaration of port in_operator_type." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 18 20
+ERROR VCP2505 "Duplicate identifier: in_operator_type" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 18 20
+ERROR VCP2545 "Duplicate port identifier: in_val_1" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 19 21
+ERROR VCP2562 "Redeclaration of port in_val_1." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 19 21
+ERROR VCP2505 "Duplicate identifier: in_val_1" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 19 21
+ERROR VCP2545 "Duplicate port identifier: in_val_2" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 20 21
+ERROR VCP2562 "Redeclaration of port in_val_2." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 20 21
+ERROR VCP2505 "Duplicate identifier: in_val_2" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 20 21
+ERROR VCP2545 "Duplicate port identifier: in_tag_1" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 21 20
+ERROR VCP2562 "Redeclaration of port in_tag_1." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 21 20
+ERROR VCP2505 "Duplicate identifier: in_tag_1" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 21 20
+ERROR VCP2545 "Duplicate port identifier: in_tag_2" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 22 20
+ERROR VCP2562 "Redeclaration of port in_tag_2." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 22 20
+ERROR VCP2505 "Duplicate identifier: in_tag_2" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 22 20
+ERROR VCP2545 "Duplicate port identifier: in_CDB_broadcast" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 24 14
+ERROR VCP2562 "Redeclaration of port in_CDB_broadcast." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 24 14
+ERROR VCP2505 "Duplicate identifier: in_CDB_broadcast" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 24 14
+ERROR VCP2545 "Duplicate port identifier: in_CDB_tag" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 25 20
+ERROR VCP2562 "Redeclaration of port in_CDB_tag." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 25 20
+ERROR VCP2505 "Duplicate identifier: in_CDB_tag" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 25 20
+ERROR VCP2545 "Duplicate port identifier: in_CDB_val" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 26 21
+ERROR VCP2562 "Redeclaration of port in_CDB_val." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 26 21
+ERROR VCP2505 "Duplicate identifier: in_CDB_val" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 26 21
+ERROR VCP2545 "Duplicate port identifier: out_rs_enable" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 28 14
+ERROR VCP2562 "Redeclaration of port out_rs_enable." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 28 14
+ERROR VCP2505 "Duplicate identifier: out_rs_enable" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 28 14
+ERROR VCP2545 "Duplicate port identifier: out_rs_tag" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 29 20
+ERROR VCP2562 "Redeclaration of port out_rs_tag." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 29 20
+ERROR VCP2505 "Duplicate identifier: out_rs_tag" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 29 20
+ERROR VCP2545 "Duplicate port identifier: out_CDB_broadcast" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 31 14
+ERROR VCP2562 "Redeclaration of port out_CDB_broadcast." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 31 14
+ERROR VCP2505 "Duplicate identifier: out_CDB_broadcast" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 31 14
+ERROR VCP2545 "Duplicate port identifier: out_CDB_tag" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 32 20
+ERROR VCP2562 "Redeclaration of port out_CDB_tag." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 32 20
+ERROR VCP2505 "Duplicate identifier: out_CDB_tag" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 32 20
+ERROR VCP2545 "Duplicate port identifier: out_CDB_val" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 33 21
+ERROR VCP2562 "Redeclaration of port out_CDB_val." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 33 21
+ERROR VCP2505 "Duplicate identifier: out_CDB_val" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 33 21
+ERROR VCP2545 "Duplicate port identifier: out_ICC_flags" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 35 20
+ERROR VCP2562 "Redeclaration of port out_ICC_flags." "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 35 20
+ERROR VCP2505 "Duplicate identifier: out_ICC_flags" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 35 20
+ERROR VCP2505 "Duplicate identifier: ADD" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 38 27
+ERROR VCP2505 "Duplicate identifier: ADD_CC" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 39 30
+ERROR VCP2505 "Duplicate identifier: ADDX" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 40 28
+ERROR VCP2505 "Duplicate identifier: ADDX_CC" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 41 31
+ERROR VCP2505 "Duplicate identifier: SUB" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 42 27
+ERROR VCP2505 "Duplicate identifier: SUB_CC" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 43 30
+ERROR VCP2505 "Duplicate identifier: SUBX" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 44 28
+ERROR VCP2505 "Duplicate identifier: SUBX_CC" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 45 31
+ERROR VCP2505 "Duplicate identifier: INVALID_TAG" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 47 34
+ERROR VCP2505 "Duplicate identifier: icc_n" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 49 32
+ERROR VCP2505 "Duplicate identifier: icc_z" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 49 32
+ERROR VCP2505 "Duplicate identifier: icc_c" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 49 32
+ERROR VCP2505 "Duplicate identifier: icc_v" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 49 32
+ERROR VCP2505 "Duplicate identifier: pos" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 51 15
+ERROR VCP2505 "Duplicate identifier: is_set" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 52 51
+ERROR VCP2505 "Duplicate identifier: bank_done" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 52 51
+ERROR VCP2505 "Duplicate identifier: is_waiting" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 52 51
+ERROR VCP2505 "Duplicate identifier: CDB_r_selected" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 52 51
+ERROR VCP2505 "Duplicate identifier: signed_a" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 53 28
+ERROR VCP2505 "Duplicate identifier: signed_b" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 54 28
+ERROR VCP2505 "Duplicate identifier: result" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 55 26
+ERROR VCP2505 "Duplicate identifier: rs" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 57 20
+ERROR VCP2505 "Duplicate identifier: i_0" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 59 13
+ERROR VCP2505 "Duplicate identifier: i_1" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 75 13
+ERROR VCP2505 "Duplicate identifier: i_2" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 101 13
+ERROR VCP2505 "Duplicate identifier: i_3" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 137 13
+ERROR VCP2505 "Duplicate identifier: i_4" "c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v" 153 13
+ERROR VCP7801 "Duplicated declaration of unit test." "c:/My_Designs/SPARC/SPARC/src/tomasulo/tomasulo_tb.v" 7 12
+MESSAGE_SP VCP7802 "test was already declared. See previous declaration." "c:/My_Designs/SPARC/SPARC/src/cache/cache_tb.v" 2 12
+ERROR VCP2505 "Duplicate identifier: clk" "c:/My_Designs/SPARC/SPARC/src/tomasulo/tomasulo_tb.v" 9 13
+ERROR VCP2505 "Duplicate identifier: INVALID_TAG" "c:/My_Designs/SPARC/SPARC/src/tomasulo/tomasulo_tb.v" 12 34
+ERROR VCP2505 "Duplicate identifier: out_Y_val" "c:/My_Designs/SPARC/SPARC/src/tomasulo/tomasulo_tb.v" 23 22
+ERROR VCP2505 "Duplicate identifier: reg_status" "c:/My_Designs/SPARC/SPARC/src/tomasulo/tomasulo_tb.v" 81 26
+ERROR VCP2505 "Duplicate identifier: cdb" "c:/My_Designs/SPARC/SPARC/src/tomasulo/tomasulo_tb.v" 105 12
+UPDATEPROGRESS 32
+UPDATEPROGRESS 33
 UPDATEPROGRESS 35
-MESSAGE "Pass 2. Processing instantiations."
-UPDATEPROGRESS 45
-MESSAGE "Pass 3. Processing behavioral statements."
-UPDATEPROGRESS 80
-MESSAGE "Running Optimizer."
-MESSAGE "ELB/DAG code generating."
-MESSAGE_SP VCP2113 "Module \$root found in current working library."
-MESSAGE_SP VCP2113 "Module mux2 found in current working library."
-MESSAGE_SP VCP2113 "Module MUX2 found in current working library."
-MESSAGE_SP VCP2113 "Module Adder found in current working library."
-MESSAGE_SP VCP2113 "Module InstructionMemory found in current working library."
-MESSAGE_SP VCP2113 "Module SignExtend found in current working library."
-MESSAGE_SP VCP2113 "Module queue_data found in current working library."
-MESSAGE_SP VCP2113 "Module IU_Adder found in current working library."
-MESSAGE_SP VCP2113 "Module IUAdder found in current working library."
-MESSAGE_SP VCP2113 "Module IULogical found in current working library."
-MESSAGE_SP VCP2113 "Module MUL_RS found in current working library."
-UPDATEPROGRESS 90
-UPDATEPROGRESS 100
-MESSAGE "Unit top modules: Reg_file."
-MESSAGE "$root top modules: mux2 MUX2 Adder InstructionMemory SignExtend queue_data IU_Adder IUAdder IULogical Reg_file MUL_RS."
 ENDPROGRESS Compiling...
-SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 0[s]."
-MESSAGE "done"
+FAILURE "Compile failure 469 Errors 9 Warnings  Analysis time: 0[s]."

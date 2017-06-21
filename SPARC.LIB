@@ -1,8 +1,15 @@
-timestamp=1497956302152
+timestamp=1497991930270
 
 [$root]
-A/$root=22|""|0|1*165414
-BinI32/$root=3*110865
+A/$root=22|""|0|1*233379
+BinI32/$root=3*162083
+Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
+
+[ADD_RS]
+A/ADD_RS=22|./src/tomasulo/rs_add.v|14|1*233849
+BinI32/ADD_RS=3*162222
+P/~emb=1178,1845,3039,3363
+R=./src/tomasulo/rs_add.v|14
 Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
 
 [Adder]
@@ -10,6 +17,20 @@ A/Adder=22|./src/Adder.v|21|1*93629
 BinI32/Adder=3*70733
 P/~emb=150,296,427,497
 R=./src/Adder.v|21
+Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
+
+[CDB]
+A/CDB=22|./src/tomasulo/cdb.v|1|1*207568
+BinI32/CDB=3*146473
+P/~emb=1019,1352,1796,1955
+R=./src/tomasulo/cdb.v|1
+Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
+
+[CUR_INST]
+A/CUR_INST=22|./src/tomasulo/current_instruction.v|1|1*215531
+BinI32/CUR_INST=3*150229
+P/~emb=1470,1945,2476,2629
+R=./src/tomasulo/current_instruction.v|1
 Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
 
 [IUAdder]
@@ -20,9 +41,16 @@ R=./src/IUAdder.v|21
 Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
 
 [IULogical]
-A/IULogical=22|./src/IUMultiplier.v|13|1*142793
-BinI32/IULogical=3*99090
+A/IULogical=22|./src/IUMultiplier.v|13|1*176446
+BinI32/IULogical=3*122846
 P/~emb=267,621,1347,1509
+R=./src/IUMultiplier.v|13
+Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
+
+[IUMultiplier]
+A/IUMultiplier=22|./src/IUMultiplier.v|13|1*183975
+BinI32/IUMultiplier=3*128513
+P/~emb=273,623,1349,1511
 R=./src/IUMultiplier.v|13
 Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
 
@@ -54,6 +82,13 @@ P/~emb=213,372,540,616
 R=./src/MUX2.v|23
 Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
 
+[REG_STATUS]
+A/REG_STATUS=22|./src/tomasulo/register_status.v|1|1*226067
+BinI32/REG_STATUS=3*156778
+P/~emb=790,1201,1665,1822
+R=./src/tomasulo/register_status.v|1
+Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
+
 [Reg_file]
 A/Reg_file=22|./src/Reg_file.v|1|1*156780
 BinI32/Reg_file=3*109116
@@ -66,6 +101,20 @@ A/SignExtend=22|./src/SignExtend.v|21|1*96303
 BinI32/SignExtend=3*72093
 P/~emb=129,286,437,507
 R=./src/SignExtend.v|21
+Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
+
+[data_cache]
+A/data_cache=22|./src/cache/cache.v|2|1*194066
+BinI32/data_cache=3*137650
+P/~emb=702,1154,1754,1944
+R=./src/cache/cache.v|2
+Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
+
+[data_memory]
+A/data_memory=22|./src/memory/memory.v|1|1*191516
+BinI32/data_memory=3*134085
+P/~emb=415,670,945,1068
+R=./src/memory/memory.v|1
 Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
 
 [datapath]
@@ -90,20 +139,27 @@ R=./src/queue.v|1
 Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
 
 [shiftBy2]
-A/shiftBy2=22|./src/shiftBy2.v|2|1*159071
+A/shiftBy2=22|./src/shiftBy2.v|2|1*158943
 BinI32/shiftBy2=3*109960
 P/~emb=125,283,429,499
 R=./src/shiftBy2.v|2
 Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
 
+[test]
+A/test=22|./src/tomasulo/register_status_tb.v|2|1*229992
+BinI32/test=3*160324
+P/~emb=79,486,776,998
+R=./src/tomasulo/register_status_tb.v|2
+Version=9.1.2354.4209  (Windows)|0000000c789cd3cd51080e700c7256d0f537020014500301
+
 [~A]
-LastVerilogToplevel=datapath
-ModifyID=1413
+LastVerilogToplevel=ADD_RS
+ModifyID=1729
 Version=73
 c:/My_Designs/SPARC/SPARC/src/Adder.v=0*29951*30316
 c:/My_Designs/SPARC/SPARC/src/IUAdder.v=0*98846*99549
 c:/My_Designs/SPARC/SPARC/src/IULogical.v=0*119351*120088
-c:/My_Designs/SPARC/SPARC/src/IUMultiplier.v=0*129613*130738
+c:/My_Designs/SPARC/SPARC/src/IUMultiplier.v=0*160285*161410
 c:/My_Designs/SPARC/SPARC/src/IU_Adder.v=0*31887*32335
 c:/My_Designs/SPARC/SPARC/src/MUX2.v=0*4452*4848
 c:/My_Designs/SPARC/SPARC/src/MUX2.v_Adder.v=0*9352*9820
@@ -114,29 +170,45 @@ c:/My_Designs/SPARC/SPARC/src/MUX2.v_Adder.v_InstructionMemory.v_SignExtend.v_IU
 c:/My_Designs/SPARC/SPARC/src/PCMux.v=0*918*1315
 c:/My_Designs/SPARC/SPARC/src/Reg_file.v=0*138293*138773
 c:/My_Designs/SPARC/SPARC/src/SignExtend.v=0*18212*18598
+c:/My_Designs/SPARC/SPARC/src/cache/cache.v=0*165994*167342
 c:/My_Designs/SPARC/SPARC/src/datapath.v=0*146889*147449
+c:/My_Designs/SPARC/SPARC/src/memory/memory_tb.v=0*169195*169907
 c:/My_Designs/SPARC/SPARC/src/queue.v=0*27946*28663
 c:/My_Designs/SPARC/SPARC/src/rs_mul.v=0*134996*136531
-c:/My_Designs/SPARC/SPARC/src/shiftBy2.v=0*140135*140503
+c:/My_Designs/SPARC/SPARC/src/shiftBy2.v=0*140039*140407
+c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb.v=0*173048*173836
+c:/My_Designs/SPARC/SPARC/src/tomasulo/cdb_tb.v=0*178623*180071
+c:/My_Designs/SPARC/SPARC/src/tomasulo/current_instruction.v=0*184016*185173
+c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status.v=0*188338*189362
+c:/My_Designs/SPARC/SPARC/src/tomasulo/register_status_tb.v=0*193959*195499
+c:/My_Designs/SPARC/SPARC/src/tomasulo/rs_add.v=0*201226*203346
 
 [~MFT]
-0=298|0SPARC.mgf|147449|34920
-1=239|1SPARC.mgf|165900|134877
-3=239|3SPARC.mgf|111004|86562
+0=368|0SPARC.mgf|203346|42310
+1=293|1SPARC.mgf|233849|176597
+3=293|3SPARC.mgf|162222|114669
 
 [~U]
-$root=12|0*145351|
+$root=12|0*195991|
+ADD_RS=12|0*196253||0x90
 Adder=12|0*82130||0x90
+CDB=12|0*174527||0x80
+CUR_INST=12|0*180781||0x90
 IUAdder=12|0*97098||0x90
-IULogical=12|0*127069||0x90
+IULogical=12|0*153376||0x90
+IUMultiplier=12|0*157736||0x90
 IU_Adder=12|0*30984||0x90
 InstructionMemory=12|0*82766||0x90
 MUL_RS=12|0*131461||0x90
 MUX2=12|0*81363||0x90
+REG_STATUS=12|0*190097||0x80
 Reg_file=12|0*137232||0x90
 SignExtend=12|0*83565||0x90
+data_cache=12|0*163441||0x90
+data_memory=12|0*162101||0x80
 datapath=12|0*145629||0x90
 mux2=12|0*150||0x90
 queue_data=12|0*26476||0x90
-shiftBy2=12|0*139476||0x90
+shiftBy2=12|0*139380||0x90
+test=12|0*192523||0x90
 

@@ -11,7 +11,7 @@
   4:0 tag_1
 */
 
-module MUL_RS (
+module ADD_RS (
   input wire clk,
 
   input wire in_rs_enable,
@@ -25,8 +25,6 @@ module MUL_RS (
   input wire [4:0] in_CDB_tag,
   input wire [31:0] in_CDB_val,
 
-  input wire [31:0] in_Y_val,
-
   output reg out_rs_enable,
   output reg [4:0] out_rs_tag,
 
@@ -34,15 +32,17 @@ module MUL_RS (
   output reg [4:0] out_CDB_tag,
   output reg [31:0] out_CDB_val,
 
-  output reg [31:0] out_Y_val,
-
   output reg [3:0] out_ICC_flags
 );
 
-parameter UMUL = 6'b001010;
-parameter SMUL = 6'b001011;
-parameter UMUL_CC = 6'b011010;
-parameter SMUL_CC = 6'b011011;
+parameter ADD = 6'b000000;
+parameter ADD_CC = 6'b010000;
+parameter ADDX = 6'b001000;
+parameter ADDX_CC = 6'b011000;
+parameter SUB = 6'b000100;
+parameter SUB_CC = 6'b010100;
+parameter SUBX = 6'b001100;
+parameter SUBX_CC = 6'b011100;
 
 parameter INVALID_TAG = 5'b11111;
 
@@ -52,8 +52,7 @@ reg [1:0] pos;
 reg is_set, bank_done, is_waiting, CDB_r_selected;
 reg signed [31:0] signed_a;
 reg signed [31:0] signed_b;
-reg signed [63:0] result;
-reg signed [31:0] signed_upper_result;
+reg signed [31:0] result;
 
 reg[109:0] rs[0:3];
 
@@ -101,8 +100,10 @@ end
 
 integer i_2;
 always @(posedge in_rs_enable or bank_done) begin
-  if (in_operator_type == UMUL || in_operator_type == SMUL
-      || in_operator_type == UMUL_CC || in_operator_type == SMUL_CC) begin
+  if (in_operator_type == ADD || in_operator_type == ADD_CC
+      || in_operator_type == ADDX || in_operator_type == ADDX_CC
+      || in_operator_type == SUB || in_operator_type == SUB_CC
+      || in_operator_type == SUBX || in_operator_type == SUBX_CC) begin
 
       is_set = 1'b0;
       for (i_2 = 0; i_2 < 4 && is_set == 1'b0; i_2=i_2+1) begin
@@ -158,29 +159,28 @@ always @(posedge clk) begin
         rs[i_4][107:107] = 1'b1;
         $display("At cycle %4t, execute tag : %3d\n", $time/5, rs[i_4][84:80]);
 
-        if (rs[i_4][79:74] == UMUL || rs[i_4][79:74] == UMUL_CC) begin
-          result = #20 rs[i_4][41:10] * rs[i_4][73:42];
-          rs[i_4][106:85] = result[31:0];
-          rs[i_4][109:109] = 1'b1;
-          out_Y_val = result[63:32];
-        end
-
-        if (rs[i_4][79:74] == SMUL || rs[i_4][79:74] == SMUL_CC) begin
+        if (rs[i_4][79:74] == ADD || rs[i_4][79:74] == ADD_CC) begin
           signed_a = rs[i_4][41:10];   // convert to signed
           signed_b = rs[i_4][73:42];   // convert to signed
-          result = #20 signed_a * signed_b;
-          rs[i_4][106:85] = result[31:0];
+          result = #5 signed_a + signed_b;
+          rs[i_4][106:85] = result;
           rs[i_4][109:109] = 1'b1;
-          signed_upper_result = result[63:32];
-          out_Y_val = signed_upper_result;
+        end
+
+        if (rs[i_4][79:74] == SUB || rs[i_4][79:74] == SUB_CC) begin
+          signed_a = rs[i_4][41:10];   // convert to signed
+          signed_b = rs[i_4][73:42];   // convert to signed
+          result = #5 signed_a - signed_b;
+          rs[i_4][106:85] = result;
+          rs[i_4][109:109] = 1'b1;
         end
 
         // modify iccs
         if (in_operator_type[4] == 1) begin
           icc_n = result[31];
-          icc_z = (result[31:0] == 32'b0);
-          icc_v = 1'b0;
-          icc_c = 1'b0;
+          icc_z = (result == 32'b0);
+          icc_c = result[31];
+          icc_v = ~(rs[i_4][75] ^ rs[i_4][43]) & (result[31] ^ rs[i_4][75]);
         end
 
       end
