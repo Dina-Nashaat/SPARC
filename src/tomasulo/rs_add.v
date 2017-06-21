@@ -1,4 +1,5 @@
 /*
+  113:110 ICC_flags
   109:109 CDB_r
   109:109 executing
   107:107 busy
@@ -20,6 +21,7 @@ module ADD_RS (
   input wire [31:0] in_val_2,
   input wire [4:0] in_tag_1,
   input wire [4:0] in_tag_2,
+  input wire [3:0] in_ICC_flags,
 
   input wire in_CDB_broadcast,
   input wire [4:0] in_CDB_tag,
@@ -46,15 +48,16 @@ parameter SUBX_CC = 6'b011100;
 
 parameter INVALID_TAG = 5'b11111;
 
-reg icc_n, icc_z, icc_c, icc_v;
+reg out_icc_n, out_icc_z, out_icc_c, out_icc_v;
+reg in_icc_c;
 
 reg [1:0] pos;
 reg is_set, bank_done, is_waiting, CDB_r_selected;
 reg signed [31:0] signed_a;
 reg signed [31:0] signed_b;
-reg signed [31:0] result;
+reg signed [32:0] result;
 
-reg[109:0] rs[0:3];
+reg[113:0] rs[0:3];
 
 integer i_0;
 initial begin
@@ -113,6 +116,7 @@ always @(posedge in_rs_enable or bank_done) begin
           rs[i_2][41:10] = in_val_1;
           rs[i_2][73:42] = in_val_2;
           rs[i_2][79:74] = in_operator_type;
+          rs[i_2][113:110] = {in_ICC_flags[0:0], in_ICC_flags[1:1], in_ICC_flags[2:2], in_ICC_flags[3:3]};
           rs[i_2][106:85] = 32'bx;
           rs[i_2][108:108] = 1'b0;
           rs[i_2][109:109] = 1'b0;
@@ -143,7 +147,7 @@ always @(rs[0][109:109] or rs[1][109:109]
       #5;
       out_CDB_tag = rs[i_3][84:80];
       out_CDB_val = rs[i_3][106:85];
-      out_ICC_flags = {icc_c, icc_v, icc_z, icc_n};
+      out_ICC_flags = {out_icc_c, out_icc_v, out_icc_z, out_icc_n};
       out_CDB_broadcast = 1'b1;
       CDB_r_selected = 1'b1;
     end
@@ -167,6 +171,15 @@ always @(posedge clk) begin
           rs[i_4][109:109] = 1'b1;
         end
 
+        if (rs[i_4][79:74] == ADDX || rs[i_4][79:74] == ADDX_CC) begin
+          signed_a = rs[i_4][41:10];   // convert to signed
+          signed_b = rs[i_4][73:42];   // convert to signed
+          in_icc_c = rs[i_4][110:110];
+          result = #5 signed_a + signed_b + in_icc_c;
+          rs[i_4][106:85] = result;
+          rs[i_4][109:109] = 1'b1;
+        end
+
         if (rs[i_4][79:74] == SUB || rs[i_4][79:74] == SUB_CC) begin
           signed_a = rs[i_4][41:10];   // convert to signed
           signed_b = rs[i_4][73:42];   // convert to signed
@@ -175,12 +188,21 @@ always @(posedge clk) begin
           rs[i_4][109:109] = 1'b1;
         end
 
+        if (rs[i_4][79:74] == SUBX || rs[i_4][79:74] == SUBX_CC) begin
+          signed_a = rs[i_4][41:10];   // convert to signed
+          signed_b = rs[i_4][73:42];   // convert to signed
+          in_icc_c = rs[i_4][110:110];
+          result = #5 signed_a - signed_b - in_icc_c;
+          rs[i_4][106:85] = result;
+          rs[i_4][109:109] = 1'b1;
+        end
+
         // modify iccs
         if (in_operator_type[4] == 1) begin
-          icc_n = result[31];
-          icc_z = (result == 32'b0);
-          icc_c = result[32];
-          icc_v = ~(rs[i_4][75] ^ rs[i_4][43]) & (result[31] ^ rs[i_4][75]);
+          out_icc_n = result[31];
+          out_icc_z = (result == 33'b0);
+          out_icc_c = result[32];
+          out_icc_v = ~(rs[i_4][75] ^ rs[i_4][43]) & (result[31] ^ rs[i_4][75]);
         end
 
       end

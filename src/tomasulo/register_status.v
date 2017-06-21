@@ -44,7 +44,7 @@ end
 
 integer i_1;
 always @(posedge in_CDB_broadcast) begin
-  $display("At cycle %4t, write back tag: %4d with value: %4d\n", $time/5, in_CDB_tag, in_CDB_val);
+  $display("At cycle %4t, write back tag: %4d, with value: %4d\n", $time/5, in_CDB_tag, in_CDB_val);
   for (i_1 = 0; i_1 < 31; i_1=i_1+1) begin
     if (registers[i_1][4:0] == in_CDB_tag) begin
       registers[i_1][36:5] = in_CDB_val;

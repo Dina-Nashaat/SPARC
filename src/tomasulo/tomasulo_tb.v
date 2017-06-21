@@ -11,14 +11,16 @@ always #5 clk = !clk;
 
 parameter INVALID_TAG = 5'b11111;
 
-parameter ADD = 6'b000000;
 parameter UMUL = 6'b001010;
+parameter ADD = 6'b000000;
+parameter ADDX = 6'b001000;
 
 reg out_fetch_next;
 reg [4:0] out_operator_type;
 reg [4:0] out_reg_1;
 reg [4:0] out_reg_2;
 reg [4:0] out_reg_3;
+reg [3:0] out_ICC_flags;
 
 reg [31:0] out_Y_val;
 
@@ -49,6 +51,7 @@ CUR_INST cur_inst (
                    .in_reg_1(out_reg_1),
                    .in_reg_2(out_reg_2),
                    .in_reg_3(out_reg_3),
+                   .in_ICC_flags(out_ICC_flags),
 
                    .in_enable(reg_status.out_enable),
                    .in_val_1(reg_status.out_val_1),
@@ -130,6 +133,7 @@ ADD_RS rs_add(
               .in_val_2(cur_inst.out_val_2),
               .in_tag_1(cur_inst.out_tag_1),
               .in_tag_2(cur_inst.out_tag_2),
+              .in_ICC_flags(cur_inst.out_ICC_flags),
 
               .in_CDB_broadcast(cdb.out_broadcast),
               .in_CDB_tag(cdb.out_tag),
@@ -137,6 +141,7 @@ ADD_RS rs_add(
               );
 
 initial begin
+  out_ICC_flags = 4'b0;
   #100 $finish;
 end
 
@@ -166,8 +171,9 @@ always @(posedge cur_inst.out_fetch_next) begin
       out_fetch_next = 1'b1;
     end else begin
       if (i == 2) begin
-        out_operator_type = ADD;
-        // out_reg_1 = 5'h3;
+        // out_ICC_flags = 4'b1000;
+        out_ICC_flags = 4'b0;
+        out_operator_type = ADDX;
         out_reg_1 = 5'h0;
         out_reg_2 = 5'h3;
         out_reg_3 = 5'h7;

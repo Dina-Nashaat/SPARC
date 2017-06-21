@@ -13,6 +13,7 @@ module CUR_INST
   input wire [31:0] in_val_2,
   input wire [4:0] in_tag_1,
   input wire [4:0] in_tag_2,
+  input wire [3:0] in_ICC_flags,
 
   input wire in_CDB_broadcast,
   input wire [4:0] in_CDB_tag,
@@ -36,7 +37,8 @@ module CUR_INST
   output reg [31:0] out_val_1,
   output reg [31:0] out_val_2,
   output reg [4:0] out_tag_1,
-  output reg [4:0] out_tag_2
+  output reg [4:0] out_tag_2,
+  output reg [3:0] out_ICC_flags
 );
 
 parameter INVALID_TAG = 5'b11111;
@@ -45,6 +47,7 @@ reg [31:0] out_val_1_reg;
 reg [31:0] out_val_2_reg;
 reg [4:0] out_tag_1_reg;
 reg [4:0] out_tag_2_reg;
+reg [3:0] out_ICC_flags_reg;
 
 initial begin
   out_fetch_next = 1'b0;
@@ -56,11 +59,6 @@ initial begin
 end
 
 always @(posedge in_CDB_broadcast) begin
-  // out_reg_1 = in_reg_1;
-  // out_reg_2 = in_reg_2;
-  // out_enable = 1'b1;
-  // #5;
-  // out_enable = 1'b0;
   if (out_tag_1_reg == in_CDB_tag) begin
     out_val_1_reg = in_CDB_val;
     out_tag_1_reg = INVALID_TAG;
@@ -99,11 +97,13 @@ always @(posedge in_enable) begin
   out_val_2_reg = in_val_2;
   out_tag_1_reg = in_tag_1;
   out_tag_2_reg = in_tag_2;
+  out_ICC_flags_reg = in_ICC_flags;
 
   out_val_1 = out_val_1_reg;
   out_val_2 = out_val_2_reg;
   out_tag_1 = out_tag_1_reg;
   out_tag_2 = out_tag_2_reg;
+  out_ICC_flags = out_ICC_flags_reg;
   out_rs_enable = 1'b1;
   #5;
   out_rs_enable = 1'b0;
